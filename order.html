@@ -24,7 +24,48 @@
     </nav>
     <h2 class="page-header__title">Вязание на заказ</h2>
   </header>
-
+  <section class="order">
+    <div class="order__wrapper">
+      <p class="order__desc">
+        Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму
+        заказа, и мы свяжемся с вами, чтобы уточнить детали.
+      </p>
+      <form class="order-form" action="#" method="post">
+        <p class="order-form__filter-name">Тип</p>
+        <input class="item-radio" type="radio" name="type" id="item-radio-1">
+        <label for="item-radio-1">Аксессуар для интерьера</label>
+        <input class="item-radio" type="radio" name="type" id="item-radio-2">
+        <label for="item-radio-2">Детская игрушка</label>
+        <p class="order-form__filter-name">Цвет</p>
+        <input class="item-checkbox" type="checkbox" name="color-1" id="item-checkbox-1">
+        <label for="item-checkbox-1">Белый</label>
+        <input class="item-checkbox" type="checkbox" name="color-2" id="item-checkbox-2">
+        <label for="item-checkbox-2">Серый</label>
+        <input class="item-checkbox" type="checkbox" name="color-3" id="item-checkbox-3">
+        <label for="item-checkbox-3">&laquo;Тиффани&raquo;</label>
+        <input class="item-checkbox" type="checkbox" name="color-4" id="item-checkbox-4">
+        <label for="item-checkbox-4">Черный</label>
+        <input class="item-checkbox" type="checkbox" name="color-5" id="item-checkbox-5">
+        <label for="item-checkbox-5">Розовый</label>
+        <input class="item-checkbox" type="checkbox" name="color-6" id="item-checkbox-6">
+        <label for="item-checkbox-6">Оранжевый</label>
+        <p class="order-form__filter-name">ФИО</p>
+        <label for="last-name">Фамилия:</label>
+        <input class="item-text" type="text" name="last-name" placeholder="Укажите фамилию" id="last-name">
+        <label for="first-name">Имя:</label>
+        <input class="item-text" type="text" name="first-name" placeholder="Укажите ваше имя" id="first-name">
+        <label for="middle-name">Фамилия:</label>
+        <input class="item-text" type="text" name="middle-name" placeholder="Отчество, если желаете" id="middle-name">
+        <p class="order-form__filter-name">ТЕЛ</p>
+        <input class="item-phone  item-text" type="tell" name="phone" placeholder="+7 XXX XX XX">
+        <p class="order-form__filter-name">E-mail</p>
+        <input class="item-phone  item-text" type="email" name="email" placeholder="Ваш e-mail">
+        <p class="order-form__filter-name">Доп</p>
+        <textarea class="item-textarea item-text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        <input class="btn" type="submit" value="Отправить заказ">
+      </form>
+    </div>
+  </section>
   <footer class="page-footer">
       <div class="footer__wrapper">
         <p class="page-footer__logo">
