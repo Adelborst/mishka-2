@@ -56,7 +56,9 @@
     <div class="video__wrapper">
       <h3 class="video__title">Процесс производства</h3>
       <div class="video__video">
-
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-crR4GM3t_g" frameborder="0" allowfullscreen></iframe>
+        <video src="video/мастер класс по вязанию корзинки крючком).mp4" controls poster="img/video-basket-mobile.jpg">
+        </video>
       </div>
       <p class="video__decr">
         По прозьбам наших любимых фолловеров мы сняли для вас подробное видео о том,
@@ -83,5 +85,14 @@
         </p>
       </div>
     </footer>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script>
+      $(document).ready(function(){
+        // Укажите ваш контейнер с видео
+        $(".video__video").fitVids();
+      });
+    </script>
+
 </body>
 </html>
