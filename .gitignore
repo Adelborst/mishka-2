@@ -1,6 +1,8 @@
 .idea
 css/*.css
 video/
+less/
+less/*.less
 *.log
 */*.log
 node_modules/
