@@ -3,3 +3,5 @@ css/*.css
 video/
 *.log
 */*.log
+node_modules/
+package.json
