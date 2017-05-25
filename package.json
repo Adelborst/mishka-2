@@ -19,7 +19,9 @@
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
     "gulp-less": "^3.3.0",
+    "gulp-uglifyjs": "^0.6.2",
     "gulp-watch": "^4.3.11"
   }
 }
