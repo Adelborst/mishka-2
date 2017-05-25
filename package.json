@@ -1,0 +1,19 @@
+{
+  "name": "mishka-adaptive-gulp",
+  "version": "1.0.0",
+  "description": "miskla adaptive project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Areshka/mishka-adaptive.git"
+  },
+  "author": "Oleg Moskalenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Areshka/mishka-adaptive/issues"
+  },
+  "homepage": "https://github.com/Areshka/mishka-adaptive#readme"
+}
