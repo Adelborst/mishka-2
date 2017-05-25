@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Areshka/mishka-adaptive#readme",
   "devDependencies": {
+    "browser-sync": "^2.18.12",
     "gulp": "^3.9.1",
     "gulp-less": "^3.3.0",
     "gulp-watch": "^4.3.11"
