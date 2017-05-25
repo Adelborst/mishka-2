@@ -1,0 +1,14 @@
+{
+  "name": "mishka-adaptive",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt-autoprefixer": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-express": "^1.4.1",
+    "jshint-stylish": "latest"
+  }
+}
