@@ -10,11 +10,6 @@ gulp.task('less', function () { // Создаем таск "sass"
     .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
 
-gulp.task('watch', ['browser-sync', 'less'] function () {
-  gulp.watch('app/less/**/*less', ['less']); // Наблюдение за less-файлами
-    //add watch for Наблюдения за другими типами файлов
-});
-
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
   browserSync({ // Выполняем browser Sync
     server: { // Определяем параметры сервера
@@ -22,4 +17,9 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
     },
     notify: false // Отключаем уведомления
   });
+});
+
+gulp.task('watch', ['browser-sync', 'less'] function () {
+  gulp.watch('app/less/**/*less', ['less']); // Наблюдение за less-файлами
+    //add watch for Наблюдения за другими типами файлов
 });
