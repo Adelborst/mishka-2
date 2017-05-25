@@ -1,0 +1,11 @@
+body {
+  background: #CC594A;
+  color: #B8CC24;
+}
+button {
+  background: #8BC5FF;
+}
+div {
+  background: red;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
