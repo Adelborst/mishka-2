@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Areshka/mishka-adaptive/issues"
   },
-  "homepage": "https://github.com/Areshka/mishka-adaptive#readme"
+  "homepage": "https://github.com/Areshka/mishka-adaptive#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
