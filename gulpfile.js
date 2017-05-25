@@ -1,8 +1,8 @@
-//подключаем пакеты gulp из папки node_modules в наш проект
-var gulp = require('gulp');
+var gulp = require('gulp'), //подключаем пакеты Gulp из папки node_modules в наш проект
+    less = require('gulp-less'); //Подключаем Less пакет
 
-gulp.task('mytask', function () {
-  return gulp.src('source-files') // Выборка исходных файлов для обработки плагином
-    .pipe(plugin()) // Вызов Gulp плагина для обработки файла
-    .pipe(gulp.dest('folder')) // Вывод результирующего файла в папку назначения (dest - пункт назначения)
-})
+gulp.task('sass', function() { // Создаем таск "sass"
+  return gulp.src('app/less/style.less') // Берем источник
+    .pipe(less()) // Преобразуем less в CSS посредством gulp-less
+    .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
+});
