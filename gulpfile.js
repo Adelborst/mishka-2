@@ -3,7 +3,7 @@ var gulp = require('gulp'), // подключаем пакеты Gulp из па�
     watch = require('gulp-watch'), // Подключаем watch пакет
     browserSync = require('browser-sync'), // Подключаем browser-sync пакет
     concat = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
-    concat = require('gulp-uglifyjs'); // Подключаем gulp-uglifyjs (для сжатия JS)
+    uglify = require('gulp-uglify'); // Подключаем gulp-uglifyjs (для сжатия JS)
 
 gulp.task('less', function () { // Создаем таск "sass"
   return gulp.src('app/less/**/*.less') // Берем все Less-файлы из папки less и дочерних, если таковые будут
