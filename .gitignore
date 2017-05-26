@@ -1,6 +1,4 @@
 .idea
-app/css/
-app/js/
 media/
 *.log
 */*.log
