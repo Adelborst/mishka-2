@@ -13,7 +13,11 @@ var gulp = require('gulp'), // подключаем пакеты Gulp из па�
     autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
 
 gulp.task('less', function () { // Создаем таск "less"
-  return gulp.src('app/less/style.less') // Берем все Less-файлы из папки less и дочерних, если таковые будут
+  return gulp.src([
+    'app/less/style.less',
+    'app/less/libs.less',
+    'app/less/normalize.less'
+    ]) // Берем все Less-файлы из папки less и дочерних, если таковые будут
     .pipe(less()) // Преобразуем less в CSS посредством gulp-less
     .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
     .pipe(gulp.dest('./app/css')) // Выгружаем результата в папку app/css
@@ -23,7 +27,8 @@ gulp.task('less', function () { // Создаем таск "less"
 gulp.task('css-libs', ['less'], function() { //Таск less лучше вызвать до запуска css-libs, чтобы нам было что минифицировать
   return gulp.src([
     'app/css/libs.css',
-    'app/css/style.css'
+    'app/css/style.css',
+    'app/css/normalize.css'
     ]) // выбираем файлы для минификации
     .pipe(cssnano()) //минифицируем
     .pipe(rename({suffix: '.min'})) //добавляем суффикс .min
