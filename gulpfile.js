@@ -23,7 +23,8 @@ gulp.task('less', function () { // Создаем таск "less"
 gulp.task('css-libs', ['less'], function() { //Таск less лучше вызвать до запуска css-libs, чтобы нам было что минифицировать
   return gulp.src([
     'app/css/libs.css',
-    'app/css/style.css'
+    'app/css/style.css',
+    'app/css/normalize.css'
     ]) // выбираем файлы для минификации
     .pipe(cssnano()) //минифицируем
     .pipe(rename({suffix: '.min'})) //добавляем суффикс .min
