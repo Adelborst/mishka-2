@@ -88,3 +88,8 @@ gulp.task('build', ['clean', 'img', 'less', 'scripts'], function() {
     .pipe(gulp.dest('dist'));
 
 });
+
+gulp.task('default', ['watch']);
+gulp.task('clear', function () {
+    return cache.clearAll();
+})
