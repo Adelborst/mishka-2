@@ -90,11 +90,14 @@ gulp.task('build', ['clean', 'img', 'less', 'scripts'], function() {
     var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
     .pipe(gulp.dest('dist/fonts'))
 
-    var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
+    var buildJs = gulp.src('app/js/*.min.js') // Переносим скрипты в продакшен
     .pipe(gulp.dest('dist/js'))
 
     var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
     .pipe(gulp.dest('dist'));
+
+    var buildMedia = gulp.src('app/media/**/*') // Переносим media в продакшен
+    .pipe(gulp.dest('dist/media'));
 
 });
 

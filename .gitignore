@@ -1,5 +1,5 @@
 .idea
-video/
+media/
 *.log
 */*.log
 node_modules/
