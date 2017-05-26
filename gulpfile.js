@@ -9,7 +9,7 @@ var gulp = require('gulp'), // подключаем пакеты Gulp из па�
     del = require('del'), // подключаем библиотеку для удаления файлов и папок
     imagemin = require('gulp-imagemin'), // подключаем библиотеку для работы с изображениями
     pngquant = require('imagemin-pngquant'), // подключаем библиотеку для работы с png
-    cashe = require('gulp-cache'); // подключаем библиотеку кеширования
+    cache = require('gulp-cache'); // подключаем библиотеку кеширования
     autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
 
 gulp.task('less', function () { // Создаем таск "less"
@@ -42,14 +42,23 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
         'app/libs/jquery/dist/jquery.min.js', // Берем jQuery
-        'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js' // Берем Magnific Popup
+        'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js', // Берем Magnific Popup
+        'app/libs/fitvids/jquery.fitvids.js'
         ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл
         .pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
 });
+gulp.task('jsmin', function() {
+  return gulp.src([
+    'app/js/main.js',
+    ]) // выбираем файлы для минификации
+    .pipe(uglify()) //минифицируем
+    .pipe(rename({suffix: '.min'})) //добавляем суффикс .min
+    .pipe(gulp.dest('app/js')); // выгружаем в папку app/css
+});
 
-gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function () {
+gulp.task('watch', ['browser-sync', 'css-libs', 'scripts', 'jsmin'], function () {
   gulp.watch('app/less/**/*less', ['less']); // Наблюдение за less-файлами
   gulp.watch('app/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
   gulp.watch('app/js/**/*.js', browserSync.reload); // Наблюдение за JS файлами в папке js
