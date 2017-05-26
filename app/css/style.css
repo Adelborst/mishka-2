@@ -1,7 +1,21 @@
 @font-face {
-  font-family: 'OpenSans';
-  src: url('/fonts/OpenSans/OpenSans.eot');
-  src: url('/fonts/OpenSans/OpenSans.eot#iefix') format('embedded-opentype'), url('/fonts/OpenSans/OpenSans.woff') format('woff'), url('/fonts/OpenSans/OpenSans.ttf') format('truetype'), url('/fonts/OpenSans/OpenSans.svg') format('svg');
+  font-family: 'RobotoRegular';
+  src: url('/fonts/RobotoRegular/RobotoRegular.eot');
+  src: url('/fonts/RobotoRegular/RobotoRegular.eot#iefix') format('embedded-opentype'), url('/fonts/RobotoRegular/RobotoRegular.woff') format('woff'), url('/fonts/RobotoRegular/RobotoRegular.ttf') format('truetype'), url('/fonts/RobotoRegular/RobotoRegular.svg') format('svg');
+  font-size: 16px;
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: 'RobotoBold';
+  src: url('/fonts/RobotoBold/RobotoBold.eot');
+  src: url('/fonts/RobotoBold/RobotoBold.eot#iefix') format('embedded-opentype'), url('/fonts/RobotoBold/RobotoBold.woff') format('woff'), url('/fonts/RobotoBold/RobotoBold.ttf') format('truetype'), url('/fonts/RobotoBold/RobotoBold.svg') format('svg');
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-color: gray;
+  font-family: 'RobotoRegular';
+  font-size: 16px;
 }
