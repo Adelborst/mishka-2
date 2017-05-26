@@ -14,14 +14,14 @@ gulp.task('less', function () { // Создаем таск "less"
     .pipe(browserSync.reload({stream: true})); // Обновляем CSS на странице при изменении
 });
 
-gulp.tast('css-libs', ['less'], function() { //Таск less лучше вызвать до запуска css-libs, чтобы нам было что минифицировать
-  return gilp.src([
-    'app/css/libs.css'
+gulp.task('css-libs', ['less'], function() { //Таск less лучше вызвать до запуска css-libs, чтобы нам было что минифицировать
+  return gulp.src([
+    'app/css/libs.css',
     'app/css/style.css'
     ]) // выбираем файлы для минификации
     .pipe(cssnano()) //минифицируем
     .pipe(rename({suffix: '.min'})) //добавляем суффикс .min
-    .pipe(gulp.dest(app/css)); // выгружаем в папку app/css
+    .pipe(gulp.dest('app/css')); // выгружаем в папку app/css
 });
 
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
