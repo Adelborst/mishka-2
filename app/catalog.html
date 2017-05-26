@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Mishka</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header class="page-header">
+    <h1 class="visually-hidden">Mishka</h1>
+    <nav class="main-nav  main-nav--closed  main-nav--nojs">
+      <div class="page-header__logo">
+        <a href="index.html"><img src="img/mishka-logo-mobile.svg" alt="Барбершоп &ldquo;Бородинский&rdquo;"></a>
+      </div>
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__items">
+          <li class="main-nav__item  main-nav__item--active"><a>Каталог товаров</a></li>
+          <li class="main-nav__item"><a href="order.html">Вязание на заказ</a></li>
+          <li class="main-nav__item  main-nav__item--search"><a href="#">Поиск по сайту</a></li>
+          <li class="main-nav__item  main-nav__item--basket"><a href="#">Корзина: пока пуста</a></li>
+        </ul>
+      </div>
+    </nav>
+    <h2 class="page-header__title">Каталог товаров</h2>
+  </header>
+  <section class="catalog">
+    <div class="catalog__wrapper">
+      <article class="catalog__item">
+        <img class="catalog__item-img" src="img/zaychik-mobile.jpg" width="260" height="195" alt="Зайчик">
+        <div class="catalog__item-info">
+          <h3 class="catalog__item-title">Зайчик-попрыгай</h3>
+          <p class="catalog__item-desc">Рост 30 см, вес 200 г</p>
+          <b class="catalog__item-price">1 200 руб.</b>
+        </div>
+      </article>
+      <article class="catalog__item">
+        <img class="catalog__item-img" src="img/basket-item-mobile.jpg" width="260" height="195" alt="Зайчик">
+        <div class="catalog__item-info">
+          <h3 class="catalog__item-title">Корзина для белья</h3>
+          <p class="catalog__item-desc">Диаметр 15 см, высота 10 см</p>
+          <b class="catalog__item-price">690 руб.</b>
+        </div>
+      </article>
+      <article class="catalog__item">
+        <img class="catalog__item-img" src="img/basket-big-item-mobile.jpg" width="260" height="195" alt="Зайчик">
+        <div class="catalog__item-info">
+          <h3 class="catalog__item-title">Большая корзина для игрушек</h3>
+          <p class="catalog__item-desc">Диаметр 30 см, высота 30 см</p>
+          <b class="catalog__item-price">1 500 руб.</b>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="video">
+    <div class="video__wrapper">
+      <h3 class="video__title">Процесс производства</h3>
+      <div class="video__video">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-crR4GM3t_g" frameborder="0" allowfullscreen></iframe>
+        <video src="video/мастер класс по вязанию корзинки крючком).mp4" controls poster="img/video-basket-mobile.jpg">
+        </video>
+      </div>
+      <p class="video__decr">
+        По прозьбам наших любимых фолловеров мы сняли для вас подробное видео о том,
+         как появляются наши товары.
+      </p>
+      <a class="btn" href="#">Сделать заказ</a>
+    </div>
+  </section>
+  <footer class="page-footer">
+      <div class="footer__wrapper">
+        <p class="page-footer__logo">
+          <img src="img/logo-footer.svg" alt="Mishka">
+        </p>
+        <p class="page-footer__social">
+          <span class="social-links">
+            <a class="social-link  social-link--in" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+            <a class="social-link  social-link--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+            <a class="social-link  social-link--tw" href="https://www.tweeter.com/htmlacademy">Мы в Твитере</a>
+          </span>
+        </p>
+        <p class="page-footer__copyright">
+          Разработано:
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </p>
+      </div>
+    </footer>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script>
+      $(document).ready(function(){
+        // Укажите ваш контейнер с видео
+        $(".video__video").fitVids();
+      });
+    </script>
+
+</body>
+</html>

@@ -1,8 +1,5 @@
 .idea
-css/*.css
-video/
+media/
 *.log
 */*.log
 node_modules/
-package.json
-Gruntfile.js
