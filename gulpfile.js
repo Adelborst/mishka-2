@@ -6,7 +6,9 @@ var gulp = require('gulp'), // подключаем пакеты Gulp из па�
     uglify = require('gulp-uglify'), // Подключаем gulp-uglifyjs (для минификации JS)
     cssnano = require('gulp-cssnano'), // подключаем gulp-cssnano (для минификации css)
     rename = require('gulp-rename'); // подключаем gulp-rename (для переименования файлов)
-    del = require('del'); // подключаем библиотеку для удаления файлов и папок
+    del = require('del'), // подключаем библиотеку для удаления файлов и папок
+    imagemin = require('gulp-imagemin'), // подключаем библиотеку для работы с изображениями
+    pngquant = require('imagemin-pngquant'); // подключаем библиотеку для работы с png
 
 gulp.task('less', function () { // Создаем таск "less"
   return gulp.src('app/less/**/*.less') // Берем все Less-файлы из папки less и дочерних, если таковые будут
@@ -55,7 +57,18 @@ gulp.task('clean', function() {
     return del.sync('dist'); // Удаляем папку dist перед сборкой
 });
 
-gulp.task('build', ['sass', 'scripts'], function() {
+gulp.task('img', function() {
+    return gulp.src('app/img/**/*') // Берем все изображения из app
+        .pipe(imagemin({ // Сжимаем их с наилучшими настройками
+            interlaced: true,
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
+});
+
+gulp.task('build', ['clean', 'img', 'less', 'scripts'], function() {
 
     var buildCss = gulp.src([ // Переносим CSS стили в продакшен
         'app/css/*.min.css',
