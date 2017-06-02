@@ -1,4 +1,33 @@
-.page-header {
-  min-height: 400px;
-  width: 320px;
+.page-header__logo {
+  min-height: 80px;
+  text-align: center;
+  background-color: red;
+}
+
+@media @tablet-widths {
+
+  .page-header {
+    min-height: 850px;
+  }
+
+  .page-header__logo {
+    margin-right: 400px;
+    min-height: 90px;
+    text-align: left;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .page-header {
+    min-height: 834px;
+  }
+
+  .page-header__logo {
+    margin-right: 490px;
+    margin-left: 490px;
+    text-align: center;
+  }
+
 }
