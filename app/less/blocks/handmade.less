@@ -1,0 +1,52 @@
+.handmade {
+  position: relative;
+  background: #f9f9f9;
+}
+
+.handmade__wrapper {
+  .container();
+  min-height: 505px;
+  padding-top: 1px;
+  background: #f9f9f9 url("../../img/hero-mobile.jpg") no-repeat 50% top;
+}
+
+.handmade__title {
+  text-align: center;
+  margin-top: 88px;
+}
+
+.handmade__items {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media @tablet-widths {
+
+  .handmade__wrapper {
+    min-height: 745px;
+    background: #f9f9f9 url("../../img/hero-tablet.jpg") no-repeat 50% 50%;
+  }
+
+  .handmade__title {
+    text-align: center;
+    margin-top: 158px;
+  }
+
+
+}
+
+@media @desktop-widths {
+
+  .handmade__wrapper {
+    background: #f9f9f9 url("../../img/hero-desktop.jpg") no-repeat 50% 50%;
+  }
+
+  .handmade__title {
+    text-align: center;
+    margin-top: 150px;
+  }
+
+}
