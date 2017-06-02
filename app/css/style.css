@@ -44,3 +44,16 @@ img {
   max-width: 100%;
   height: auto;
 }
+.page-header {
+  min-height: 980px;
+}
+@media (min-width: 768px) {
+  .page-header {
+    min-height: 850px;
+  }
+}
+@media (min-width: 1150px) {
+  .page-header {
+    min-height: 834px;
+  }
+}
