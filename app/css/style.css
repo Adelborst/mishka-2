@@ -310,3 +310,19 @@ img {
   padding-top: 50px;
   background-color: red;
 }
+@media (min-width: 768px) {
+  .about-us__title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .about-us__list {
+    background-color: green;
+    font-size: 0;
+  }
+  .about-us__list-item {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 18px;
+    width: 334px;
+  }
+}
