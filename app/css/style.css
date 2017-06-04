@@ -282,3 +282,31 @@ img {
     width: 525px;
   }
 }
+.about-us__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .about-us__wrapper {
+    width: 668px;
+  }
+}
+@media (min-width: 1150px) {
+  .about-us__wrapper {
+    width: 1050px;
+  }
+}
+.about-us__title {
+  margin-top: 38px;
+  margin-bottom: 30px;
+}
+.about-us__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.about-us__list-item {
+  width: 320px;
+  padding-top: 50px;
+  background-color: red;
+}
