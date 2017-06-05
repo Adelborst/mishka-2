@@ -375,7 +375,21 @@ img {
   display: block;
   width: 100%;
   background-color: red;
+  clear: both;
 }
 .reviews__ordered--hidden1 {
   display: none;
+}
+.reviews__next,
+.reviews__prev {
+  margin: 0;
+  padding: 0;
+  width: 130px;
+  margin-bottom: 40px;
+}
+.reviews__prev {
+  float: left;
+}
+.reviews__next {
+  float: right;
 }
