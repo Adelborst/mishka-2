@@ -441,3 +441,122 @@ img {
     padding-left: 175px;
   }
 }
+.contacts__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .contacts__wrapper {
+    width: 668px;
+  }
+}
+@media (min-width: 1150px) {
+  .contacts__wrapper {
+    width: 1050px;
+  }
+}
+.contacts__map {
+  width: 320px;
+  height: 457px;
+  margin: 0 auto;
+  background: url("../../img/map-mobile.jpg") no-repeat;
+}
+@media (min-width: 768px) {
+  .contacts__map {
+    width: 768px;
+    margin-left: -50px;
+    background: url("../../img/map-tablet.jpg") no-repeat;
+  }
+}
+@media (min-width: 1150px) {
+  .contacts__wrapper {
+    padding-top: 70px;
+    padding-bottom: 100px;
+  }
+  .contacts__wrapper::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .contacts__info {
+    float: left;
+    width: 350px;
+    padding-left: 175px;
+  }
+  .contacts__map {
+    float: right;
+    width: 525px;
+    margin-left: 0;
+    background: url("../../img/map-desctop.jpg") no-repeat;
+  }
+  .contacts__write-btn {
+    margin-left: 175px;
+  }
+}
+.page-footer {
+  background-color: #f1f1f1;
+}
+.page-footer__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .page-footer__wrapper {
+    width: 668px;
+  }
+}
+@media (min-width: 1150px) {
+  .page-footer__wrapper {
+    width: 1050px;
+  }
+}
+.page-footer__logo--hidden {
+  display: none;
+}
+.page-footer__social,
+.page-footer__copyright {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.page-footer__social {
+  border-bottom: 1px solid #e5e5e5;
+}
+@media (min-width: 768px) {
+  .page-footer__wrapper {
+    padding-top: 45px;
+    padding-bottom: 55px;
+  }
+  .page-footer__wrapper::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .page-footer__logo--hidden {
+    float: left;
+    display: block;
+    width: 167px;
+  }
+  .page-footer__social {
+    float: left;
+    width: 316px;
+    padding: 0;
+    border-bottom: none;
+  }
+  .page-footer__copyright {
+    float: right;
+    width: 185px;
+    padding: 0;
+  }
+}
+@media (min-width: 1150px) {
+  .page-footer__logo--hidden {
+    width: 175px;
+  }
+  .page-footer__social {
+    width: 685px;
+  }
+  .page-footer__copyright {
+    width: 190px;
+  }
+}
