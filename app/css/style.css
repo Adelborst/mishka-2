@@ -441,3 +441,66 @@ img {
     padding-left: 175px;
   }
 }
+.contacts {
+  width: 320px;
+  margin: 0 auto;
+  background-color: red;
+}
+.contacts__wrapper {
+  width: 320px;
+  margin: 0 auto;
+  background-color: green;
+}
+@media (min-width: 768px) {
+  .contacts__wrapper {
+    width: 668px;
+  }
+}
+@media (min-width: 1150px) {
+  .contacts__wrapper {
+    width: 1050px;
+  }
+}
+.contacts__map {
+  width: 320px;
+  height: 457px;
+  background: url("../../img/map-mobile.jpg") no-repeat;
+}
+@media (min-width: 768px) {
+  .contacts {
+    width: 768px;
+  }
+  .contacts__map {
+    width: 768px;
+    margin-left: -50px;
+    background: url("../../img/map-tablet.jpg") no-repeat;
+  }
+}
+@media (min-width: 1150px) {
+  .contacts {
+    width: 1150px;
+  }
+  .contacts__wrapper {
+    padding-top: 70px;
+    padding-bottom: 100px;
+  }
+  .contacts__wrapper::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .contacts__info {
+    float: left;
+    width: 350px;
+    padding-left: 175px;
+  }
+  .contacts__map {
+    float: right;
+    width: 525px;
+    margin-left: 0;
+    background: url("../../img/map-desctop.jpg") no-repeat;
+  }
+  .contacts__write-btn {
+    margin-left: 175px;
+  }
+}
