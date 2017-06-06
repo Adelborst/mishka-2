@@ -444,12 +444,10 @@ img {
 .contacts {
   width: 320px;
   margin: 0 auto;
-  background-color: red;
 }
 .contacts__wrapper {
   width: 320px;
   margin: 0 auto;
-  background-color: green;
 }
 @media (min-width: 768px) {
   .contacts__wrapper {
