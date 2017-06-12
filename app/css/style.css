@@ -88,9 +88,13 @@ img {
     min-height: 834px;
   }
   .page-header__logo {
-    margin-right: 490px;
-    margin-left: 490px;
+    width: 150px;
     text-align: center;
+    -webkit-box-ordinal-group: 6;
+    -webkit-order: 5;
+        -ms-flex-order: 5;
+            order: 5;
+    background-color: blue;
   }
 }
 .main-nav {
@@ -168,7 +172,8 @@ img {
   background-color: #cacaca;
 }
 .main-nav__items,
-.main-nav__user-items {
+.main-nav__user-items,
+.main-nav__sales {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -225,7 +230,8 @@ img {
 .main-nav__user-item--basket:active::before {
   background-position: -36px -5px;
 }
-.main-nav__item:nth-child(n+3) {
+.main-nav__sales,
+.main-nav__deliver {
   display: none;
 }
 @media (max-width: 767px) {
@@ -344,27 +350,43 @@ img {
 }
 @media (min-width: 1150px) {
   .main-nav__items {
-    text-align: left;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 450px;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    position: static;
+    width: 410px;
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+        -ms-flex-order: 0;
+            order: 0;
+    background-color: yellow;
   }
   .main-nav__user-items {
     text-align: right;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 450px;
+    width: 350px;
+    -webkit-box-ordinal-group: 11;
+    -webkit-order: 10;
+        -ms-flex-order: 10;
+            order: 10;
+    background-color: red;
   }
-  .main-nav__item,
-  .main-nav__user-item {
-    display: inline-block;
+  .main-nav__item a {
+    width: 167px;
+    margin-right: 35px;
+    padding-top: 33px;
+    padding-bottom: 33px;
+    font-size: 16px;
   }
-  .main-nav__item:nth-child(2) {
-    margin-bottom: 60px;
+  .main-nav__sales,
+  .main-nav__deliver {
+    display: block;
+    -webkit-box-ordinal-group: 16;
+    -webkit-order: 15;
+        -ms-flex-order: 15;
+            order: 15;
   }
-  .main-nav__item:nth-child(n+3) {
+  .main-nav__sales .main-nav__item--sales,
+  .main-nav__deliver {
     display: inline-block;
   }
   .main-nav__toggle {
