@@ -10,22 +10,25 @@
   <header class="page-header">
     <h1 class="visually-hidden">Mishka</h1>
 
-    <nav class="main-nav  main-nav--opened  main-nav--nojs">
-      <div class="page-header__logo">
-        <a href="index.html"><img src="img/mishka-logo-mobile.svg" alt="Барбершоп &ldquo;Бородинский&rdquo;"></a>
-      </div>
+    <nav class="main-nav  main-nav--closed  main-nav--nojs">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
+        <div class="page-header__logo">
+          <a href="index.html"><img src="img/mishka-logo-mobile.svg" alt="Барбершоп &ldquo;Бородинский&rdquo;"></a>
+        </div>
         <ul class="main-nav__items">
           <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
           <li class="main-nav__item"><a href="order.html">Вязание на заказ</a></li>
-          <li class="main-nav__item"><a href="#">Новые поступления</a></li>
-          <li class="main-nav__item"><a href="#">Распродажа</a></li>
         </ul>
         <ul class="main-nav__user-items">
           <li class="main-nav__user-item  main-nav__user-item--search"><a href="#">Поиск по сайту</a></li>
           <li class="main-nav__user-item  main-nav__user-item--basket"><a href="#">Корзина: пока пуста</a></li>
         </ul>
+        <ul class="main-nav__sales">
+          <li class="main-nav__item  main-nav__item--sales"><a class="main-nav__link" href="#">Новые поступления</a></li>
+          <li class="main-nav__item  main-nav__item--sales"><a class="main-nav__link" href="#">Распродажа</a></li>
+        </ul>
+        <p class="main-nav__deliver">Бесплатная доставка по России</p>
       </div>
     </nav>
     <div class="handmade">
@@ -148,5 +151,6 @@
         </p>
       </div>
     </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>
