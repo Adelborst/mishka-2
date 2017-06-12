@@ -385,9 +385,20 @@ img {
         -ms-flex-order: 15;
             order: 15;
   }
-  .main-nav__sales .main-nav__item--sales,
-  .main-nav__deliver {
+  .main-nav__item--sales {
     display: inline-block;
+  }
+  .main-nav__sales {
+    position: absolute;
+    top: 88px;
+    z-index: 2;
+  }
+  .main-nav__deliver {
+    position: absolute;
+    top: 88px;
+    right: 0;
+    z-index: 2;
+    font: normal 14px/24px 'Verdana', Arial, sans-serif;
   }
   .main-nav__toggle {
     display: none;
