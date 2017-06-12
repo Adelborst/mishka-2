@@ -1,7 +1,5 @@
 .main-nav {
   position: relative;
-  width: auto;
-  margin: 0 auto;
 }
 
 .main-nav__toggle {
@@ -80,11 +78,76 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  text-align: center;
+}
+
+.main-nav__item a,
+.main-nav__user-item a {
+  display: block;
+  padding: 27px 75px;
+  font: bold 16px/24px @fontVerdana, Arial, sans-serif;
+  text-decoration: none;
+  color: #000000;
+  border-bottom: 1px solid #ececec;
+  background-color: #ffffff;
+
+  &:hover {
+    color: #b0b0b0;
+  }
+
+  &:active {
+    color: #cacaca;
+  }
+}
+
+.main-nav__user-item {
+  position: relative;
+
+  &--search::before,
+  &--basket::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: block;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    background: url("../../img/spritesheet.png") no-repeat;
+  }
+
+  &--search::before {
+    background-position: -36px -33px;
+  }
+  &--search:hover::before {
+    background-position: -64px -34px;
+  }
+  &--search:active::before {
+      background-position: -67px -5px;
+  }
+
+  &--basket::before {
+    background-position: -5px -5px;
+  }
+  &--basket:hover::before {
+    background-position: -5px -33px;
+  }
+  &--basket:active::before {
+    background-position: -36px -5px;
+  }
 }
 
 .main-nav__item:nth-child(n+3) {
   display: none;
+}
+
+@media @mobile-widths-only {
+
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+  .main-nav--closed .main-nav__user-items {
+    display: none;
+  }
 }
 
 

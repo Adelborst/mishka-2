@@ -88,8 +88,6 @@ img {
 }
 .main-nav {
   position: relative;
-  width: auto;
-  margin: 0 auto;
 }
 .main-nav__toggle {
   position: absolute;
@@ -167,10 +165,68 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
-  text-align: center;
+}
+.main-nav__item a,
+.main-nav__user-item a {
+  display: block;
+  padding: 27px 75px;
+  font: bold 16px/24px 'Verdana', Arial, sans-serif;
+  text-decoration: none;
+  color: #000000;
+  border-bottom: 1px solid #ececec;
+  background-color: #ffffff;
+}
+.main-nav__item a:hover,
+.main-nav__user-item a:hover {
+  color: #b0b0b0;
+}
+.main-nav__item a:active,
+.main-nav__user-item a:active {
+  color: #cacaca;
+}
+.main-nav__user-item {
+  position: relative;
+}
+.main-nav__user-item--search::before,
+.main-nav__user-item--basket::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  display: block;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  background: url("../../img/spritesheet.png") no-repeat;
+}
+.main-nav__user-item--search::before {
+  background-position: -36px -33px;
+}
+.main-nav__user-item--search:hover::before {
+  background-position: -64px -34px;
+}
+.main-nav__user-item--search:active::before {
+  background-position: -67px -5px;
+}
+.main-nav__user-item--basket::before {
+  background-position: -5px -5px;
+}
+.main-nav__user-item--basket:hover::before {
+  background-position: -5px -33px;
+}
+.main-nav__user-item--basket:active::before {
+  background-position: -36px -5px;
 }
 .main-nav__item:nth-child(n+3) {
   display: none;
+}
+@media (max-width: 767px) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+  .main-nav--closed .main-nav__user-items {
+    display: none;
+  }
 }
 @media (min-width: 768px) {
   .main-nav {
