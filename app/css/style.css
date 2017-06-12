@@ -94,7 +94,6 @@ img {
     -webkit-order: 5;
         -ms-flex-order: 5;
             order: 5;
-    background-color: blue;
   }
 }
 .main-nav {
@@ -359,7 +358,6 @@ img {
     -webkit-order: 0;
         -ms-flex-order: 0;
             order: 0;
-    background-color: yellow;
   }
   .main-nav__user-items {
     text-align: right;
@@ -384,21 +382,25 @@ img {
     -webkit-order: 15;
         -ms-flex-order: 15;
             order: 15;
+    position: absolute;
+    top: 88px;
+    z-index: 2;
+    font: normal 14px/24px 'Verdana', Arial, sans-serif;
   }
   .main-nav__item--sales {
     display: inline-block;
   }
-  .main-nav__sales {
-    position: absolute;
-    top: 88px;
-    z-index: 2;
+  .main-nav__item--sales a {
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .main-nav__deliver {
-    position: absolute;
-    top: 88px;
     right: 0;
-    z-index: 2;
-    font: normal 14px/24px 'Verdana', Arial, sans-serif;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   .main-nav__toggle {
     display: none;
@@ -409,32 +411,82 @@ img {
   background: #f9f9f9;
 }
 .handmade__wrapper {
-  width: 320px;
-  margin: 0 auto;
+  width: auto;
   min-height: 505px;
   padding-top: 1px;
   background: #f9f9f9 url("../../img/hero-mobile.jpg") no-repeat 50% top;
 }
 @media (min-width: 768px) {
   .handmade__wrapper {
-    width: 668px;
-  }
-}
-@media (min-width: 1150px) {
-  .handmade__wrapper {
-    width: 1050px;
+    width: 87%;
+    max-width: 960px;
+    margin: 0 auto;
   }
 }
 .handmade__title {
   text-align: center;
-  margin-top: 88px;
+  margin-top: 87px;
+  font: bold 24px/30px 'Tahoma', Arial, sans-serif;
 }
 .handmade__items {
   position: absolute;
+  background-color: #63d1bb;
   bottom: 0;
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+.handmade__item a {
+  display: block;
+  padding: 27px 30px;
+  font: bold 18px/24px 'Tahoma', Arial, sans-serif;
+  text-decoration: none;
+  color: #ffffff;
+}
+.handmade__item {
+  position: relative;
+}
+.handmade__item--interior:hover,
+.handmade__item--interior:active {
+  background-color: #59d5bc;
+}
+.handmade__item--interior::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  right: 35px;
+  width: 40px;
+  height: 63px;
+  background: url("../../img/interior.svg") no-repeat;
+}
+.handmade__item--interior:hover::before {
+  background: url("../../img/interior-hover.svg") no-repeat;
+}
+.handmade__item--interior:active::before {
+  background: url("../../img/interior-active.svg") no-repeat;
+}
+.handmade__item--toy {
+  background-color: #56c3b2;
+}
+.handmade__item--toy:hover,
+.handmade__item--toy:active {
+  background-color: #46c1ae;
+}
+.handmade__item--toy::before {
+  content: "";
+  position: absolute;
+  top: 22px;
+  right: 28px;
+  width: 60px;
+  height: 65px;
+  background: url("../../img/toy.svg") no-repeat;
+}
+.handmade__item--toy:hover::before {
+  background: url("../../img/toy-hover.svg") no-repeat;
+}
+.handmade__item--toy:active::before {
+  opacity: 0.5;
 }
 @media (min-width: 768px) {
   .handmade__wrapper {

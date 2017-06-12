@@ -4,7 +4,7 @@
 }
 
 .handmade__wrapper {
-  .container();
+  .container-fluid();
   min-height: 505px;
   padding-top: 1px;
   background: #f9f9f9 url("../../img/hero-mobile.jpg") no-repeat 50% top;
@@ -12,20 +12,85 @@
 
 .handmade__title {
   text-align: center;
-  margin-top: 88px;
+  margin-top: 87px;
+  font: bold 24px/30px @fontTahoma, Arial, sans-serif;
 }
 
 .handmade__items {
   position: absolute;
+  background-color: #63d1bb;
   bottom: 0;
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.handmade__item a {
+
+  display: block;
+  padding: 27px 30px;
+  font: bold 18px/24px @fontTahoma, Arial, sans-serif;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.handmade__item {
+  position: relative;
+
+  &--interior:hover,
+  &--interior:active {
+    background-color: #59d5bc;
+  }
+
+  &--interior::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: 35px;
+    width: 40px;
+    height: 63px;
+    background: url("../../img/interior.svg") no-repeat;
+  }
+
+  &--interior:hover::before {
+    background: url("../../img/interior-hover.svg") no-repeat;
+  }
+  &--interior:active::before {
+    background: url("../../img/interior-active.svg") no-repeat;
+  }
+
+  &--toy {
+    background-color: #56c3b2;
+  }
+
+  &--toy:hover,
+  &--toy:active {
+    background-color: #46c1ae;
+  }
+
+  &--toy::before {
+    content: "";
+    position: absolute;
+    top: 22px;
+    right: 28px;
+    width: 60px;
+    height: 65px;
+    background: url("../../img/toy.svg") no-repeat;
+  }
+
+  &--toy:hover::before {
+    background: url("../../img/toy-hover.svg") no-repeat;
+  }
+  &--toy:active::before {
+    // background: url("../../img/toy.svg") no-repeat;
+    opacity: 0.5;
+  }
+}
+
 @media @tablet-widths {
 
-  .handmade__wrapper {
+  .handmade__wrapper {  
     min-height: 745px;
     background: #f9f9f9 url("../../img/hero-tablet.jpg") no-repeat 50% 50%;
   }
