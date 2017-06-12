@@ -233,6 +233,20 @@ img {
   .main-nav--closed .main-nav__user-items {
     display: none;
   }
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+    height: auto;
+  }
+  .main-nav--nojs .main-nav__item,
+  .main-nav--nojs .main-nav__user-items {
+    display: block;
+  }
+  .main-nav__item:nth-child(n+3) {
+    display: none;
+  }
 }
 @media (min-width: 768px) {
   .main-nav {
