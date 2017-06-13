@@ -114,27 +114,39 @@
     width: 22px;
     height: 22px;
     cursor: pointer;
-    background: url("../../img/spritesheet.png") no-repeat;
+    background: url("../../img/sprite.png") no-repeat top left;
   }
 
   &--search::before {
-    background-position: -36px -33px;
+    background-position:  -93px 0px;
+    width: 18px;
+    height: 18px;;
   }
   &--search:hover::before {
-    background-position: -64px -34px;
+    background-position: -149px 0px;
+    width: 18px;
+    height: 19px;
   }
   &--search:active::before {
-      background-position: -67px -5px;
+      background-position:  -121px 0px;
+      width: 18px;
+      height: 19px;;
   }
 
   &--basket::before {
-    background-position: -5px -5px;
+    background-position: 0px 0px;
+    width: 21px;
+    height: 18px;
   }
   &--basket:hover::before {
-    background-position: -5px -33px;
+    background-position: -62px 0px;
+    width: 21px;
+    height: 18px;
   }
   &--basket:active::before {
-    background-position: -36px -5px;
+    background-position: -31px 0px;
+    width: 21px;
+    height: 18px;
   }
 }
 
@@ -250,7 +262,7 @@
     flex-wrap: wrap;
     position: static;
     width: 410px;
-    order: 0;  
+    order: 0;
   }
 
   .main-nav__user-items {
