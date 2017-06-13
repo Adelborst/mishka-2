@@ -1,11 +1,11 @@
 .featured {
-  .container();
+
 }
 .featured__wrapper {
+  .container-fluid();
   position: relative;
-
-  .clearfix();
-  padding: 32px 0;  
+  padding: 30px;
+  font: normal 14px/24px @fontOpenSans, Arial, sans-serif;
 }
 
 .featured__title,
@@ -14,9 +14,38 @@
   padding: 0;
 }
 
+.featured__title {
+  margin-bottom: 12px;
+  font: bold 24px/30px @fontTahoma, Arial, sans-serif;
+}
+
+.featured__label {
+  margin-bottom: 30px;
+  font-family: @fontOpenSansBold, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #a1e3d6;
+}
+
+.featured__desc {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  font-size: 15px;
+  line-height: 24px;
+}
+
 .featured__info {
   border-collapse: collapse;
-  margin-bottom: 1px;
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.featured__info tr {
+  border-bottom: 1px solid #ececec;
 }
 
 .featured__info td {
@@ -27,34 +56,68 @@
   width: 100px;
 }
 
+.featured__img {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.featured__price {
+  margin-bottom: 30px;
+  font: bold 18px/24px @fontVerdana, Arial, sans-serif;
+  text-align: center;
+  color: #444444;
+}
+
+.btn {
+  .btn();
+}
+
  @media @tablet-widths {
 
+   .featured__wrapper {
+     display: flex;
+     align-items: stretch;
+     justify-content: space-between;
+     flex-wrap: wrap;
+   }
+
   .featured__title {
-    margin-bottom: 60px;
-    margin-right: 127px;
+    flex-basis: 80.5%;
+    margin: 0;
+    margin-bottom: 58px;
+    font-size: 40px;
+    flex-grow: 1;
+    line-height: 50px;
+    padding: 0;
   }
 
   .featured__label {
-    position: absolute;
-    top: 32px;
-    right: 0;
-    width: 126px;
+    flex-basis: 13.8%;
+    margin: 0;
+    margin-bottom: 58px;
+    padding-top: 12px;
     text-align: center;
   }
 
   .featured__intro {
-    float: left;
-    width: 295px;
+    width: 44%;
+    margin: 0;
   }
 
-  .featured__img {
-    float: right;
-    width: 334px;
+  .featured__desc {
+    margin-bottom: 50px;
+  }
+
+  .featured__img {    
+    width: 51%;
+    margin: 0;
+    text-align: right;
   }
 
   .feature__ordered {
       position: absolute;
-      bottom: 32px;
+      bottom: 35px;
+      width: 40.5%;
   }
 
 }

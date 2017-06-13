@@ -1,10 +1,10 @@
 .handmade {
   position: relative;
-  background: #f9f9f9;
+  background: #f9f9f9;  
 }
 
 .handmade__wrapper {
-  .container-fluid();
+  position: relative;
   min-height: 505px;
   padding-top: 1px;
   background: #f9f9f9 url("../../img/hero-mobile.jpg") no-repeat 50% top;
@@ -18,7 +18,6 @@
 
 .handmade__items {
   position: absolute;
-  background-color: #63d1bb;
   bottom: 0;
   width: 100%;
   margin: 0;
@@ -27,7 +26,6 @@
 }
 
 .handmade__item a {
-
   display: block;
   padding: 27px 30px;
   font: bold 18px/24px @fontTahoma, Arial, sans-serif;
@@ -37,6 +35,10 @@
 
 .handmade__item {
   position: relative;
+
+  &--interior {
+    background-color: #63d1bb;
+  }
 
   &--interior:hover,
   &--interior:active {
@@ -48,16 +50,17 @@
     position: absolute;
     top: 22px;
     right: 35px;
-    width: 40px;
-    height: 63px;
-    background: url("../../img/interior.svg") no-repeat;
+    width: 41px;
+    height: 62px;
+    background: url("../../img/sprite.png") no-repeat;
+    background-position:  -177px 0px;
   }
 
   &--interior:hover::before {
-    background: url("../../img/interior-hover.svg") no-repeat;
+    background-position: -279px 0px;
   }
   &--interior:active::before {
-    background: url("../../img/interior-active.svg") no-repeat;
+    background-position: -228px 0px;
   }
 
   &--toy {
@@ -75,31 +78,64 @@
     top: 22px;
     right: 28px;
     width: 60px;
-    height: 65px;
-    background: url("../../img/toy.svg") no-repeat;
+    height: 61px;
+    background: url("../../img/sprite.png") no-repeat;
+    background-position: -330px 0px;
   }
 
   &--toy:hover::before {
-    background: url("../../img/toy-hover.svg") no-repeat;
+    background-position: -470px 0px;
   }
   &--toy:active::before {
-    // background: url("../../img/toy.svg") no-repeat;
-    opacity: 0.5;
+    background-position: -400px 0px;
+    color: #8be2d0;
+  }
+
+  &--interior:active a,
+  &--toy:active a {
+    color: #8be2d0;
   }
 }
 
 @media @tablet-widths {
 
-  .handmade__wrapper {  
-    min-height: 745px;
+  .handmade__wrapper {
+    .container-fluid();
+    min-height: 740px;
     background: #f9f9f9 url("../../img/hero-tablet.jpg") no-repeat 50% 50%;
   }
 
   .handmade__title {
-    text-align: center;
-    margin-top: 158px;
+    margin-top: 156px;
+    padding: 0 80px;
+    font-size: 41px;
+    line-height: 50px;
   }
 
+  .handmade__title br {
+    display: none;
+  }
+
+  .handmade__items {
+    bottom: 0;
+    font-size: 0;
+  }
+
+  .handmade__item {
+    display: inline-block;
+    width: 50%;
+
+    &--interior {
+      background: #63d1bb url("../../img/zigzag-fill-desktop.png") repeat-x bottom;
+    }
+    &--toy {
+      background: #56c3b2 url("../../img/zigzag-fill-desktop.png") repeat-x bottom;
+    }
+  }
+
+  .handmade__item a {
+    padding: 35px 35px;
+  }
 
 }
 
@@ -110,8 +146,10 @@
   }
 
   .handmade__title {
-    text-align: center;
     margin-top: 150px;
+    padding: 0 100px;
+    font-size: 50px;
+    line-height: 57px;
   }
 
 }
