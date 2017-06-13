@@ -73,9 +73,6 @@ img {
   opacity: 0.3;
 }
 @media (min-width: 768px) {
-  .page-header {
-    min-height: 850px;
-  }
   .page-header__logo {
     width: 48%;
     padding: 20px 0;
@@ -84,9 +81,6 @@ img {
   }
 }
 @media (min-width: 1150px) {
-  .page-header {
-    min-height: 834px;
-  }
   .page-header__logo {
     width: 150px;
     text-align: center;
@@ -553,23 +547,18 @@ img {
     line-height: 57px;
   }
 }
-.featured {
-  width: 320px;
-  margin: 0 auto;
+.featured__wrapper {
+  width: auto;
+  position: relative;
+  padding: 30px;
+  font: normal 14px/24px 'OpenSans', Arial, sans-serif;
 }
 @media (min-width: 768px) {
-  .featured {
-    width: 668px;
+  .featured__wrapper {
+    width: 87%;
+    max-width: 960px;
+    margin: 0 auto;
   }
-}
-@media (min-width: 1150px) {
-  .featured {
-    width: 1050px;
-  }
-}
-.featured__wrapper {
-  position: relative;
-  padding: 32px 0;
 }
 .featured__wrapper::after {
   content: "";
@@ -581,15 +570,69 @@ img {
   margin: 0;
   padding: 0;
 }
+.featured__title {
+  margin-bottom: 12px;
+  font: bold 24px/30px 'Tahoma', Arial, sans-serif;
+}
+.featured__label {
+  margin-bottom: 30px;
+  font-family: 'OpenSansBold', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #a1e3d6;
+}
+.featured__desc {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  font-size: 15px;
+  line-height: 24px;
+}
 .featured__info {
   border-collapse: collapse;
-  margin-bottom: 1px;
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 15px;
+  line-height: 20px;
+}
+.featured__info tr {
+  border-bottom: 1px solid #ececec;
 }
 .featured__info td {
   padding: 12px 0;
 }
 .featured__parametr {
   width: 100px;
+}
+.featured__img {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.featured__price {
+  margin-bottom: 30px;
+  font: bold 18px/24px 'Verdana', Arial, sans-serif;
+  text-align: center;
+  color: #444444;
+}
+.btn {
+  display: block;
+  padding: 16px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: #444444;
+  border: 2px solid #444444;
+}
+.btn:hover {
+  background-color: #444444;
+  color: #ffffff;
+}
+.btn:active {
+  color: #7c7c7c;
 }
 @media (min-width: 768px) {
   .featured__title {
