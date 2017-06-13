@@ -43,21 +43,27 @@
     background-color: #59d5bc;
   }
 
+  &--interior:active a,
+  &--toy:active a {
+    color: #8be2d0;
+  }
+
   &--interior::before {
     content: "";
     position: absolute;
     top: 22px;
     right: 35px;
-    width: 40px;
-    height: 63px;
-    background: url("../../img/interior.svg") no-repeat;
+    width: 41px;
+    height: 62px;
+    background: url("../../img/sprite.png") no-repeat;
+    background-position:  -177px 0px;
   }
 
   &--interior:hover::before {
-    background: url("../../img/interior-hover.svg") no-repeat;
+    background-position: -279px 0px;
   }
   &--interior:active::before {
-    background: url("../../img/interior-active.svg") no-repeat;
+    background-position: -228px 0px;
   }
 
   &--toy {
@@ -75,22 +81,23 @@
     top: 22px;
     right: 28px;
     width: 60px;
-    height: 65px;
-    background: url("../../img/toy.svg") no-repeat;
+    height: 61px;
+    background: url("../../img/sprite.png") no-repeat;
+    background-position: -330px 0px;
   }
 
   &--toy:hover::before {
-    background: url("../../img/toy-hover.svg") no-repeat;
+    background-position: -470px 0px;
   }
   &--toy:active::before {
-    // background: url("../../img/toy.svg") no-repeat;
-    opacity: 0.5;
+    background-position: -400px 0px;
+    color: #8be2d0;
   }
 }
 
 @media @tablet-widths {
 
-  .handmade__wrapper {  
+  .handmade__wrapper {
     min-height: 745px;
     background: #f9f9f9 url("../../img/hero-tablet.jpg") no-repeat 50% 50%;
   }
