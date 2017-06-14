@@ -549,18 +549,10 @@ img {
   }
 }
 .featured__wrapper {
-  width: auto;
   position: relative;
   margin-bottom: 30px;
   padding: 0 30px;
   font: normal 14px/24px 'OpenSans', Arial, sans-serif;
-}
-@media (min-width: 768px) {
-  .featured__wrapper {
-    width: 87%;
-    max-width: 1050px;
-    margin: 0 auto;
-  }
 }
 .featured__title,
 .featured__label {
@@ -633,6 +625,7 @@ img {
 }
 @media (min-width: 768px) {
   .featured__wrapper {
+    width: auto;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -648,6 +641,9 @@ img {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+    margin-bottom: 50px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .featured__title {
     -webkit-flex-basis: 80.5%;
@@ -686,14 +682,21 @@ img {
   }
   .feature__ordered {
     position: absolute;
-    bottom: 35px;
+    bottom: 8px;
     width: 40.5%;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .featured__wrapper {
+    width: 87%;
+    max-width: 1050px;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1150px) {
   .featured__wrapper {
     width: 875px;
-    padding: 30px 0;
+    margin-bottom: 65px;
     padding-left: 175px;
   }
   .featured__title {
@@ -723,17 +726,10 @@ img {
 .about-us {
   background: #ffffff url("../../img/zigzag-line-desktop.png") repeat-x;
   padding-top: 1px;
+  margin-bottom: 60px;
 }
 .about-us__wrapper {
-  width: auto;
   padding: 0 30px;
-}
-@media (min-width: 768px) {
-  .about-us__wrapper {
-    width: 87%;
-    max-width: 1050px;
-    margin: 0 auto;
-  }
 }
 .about-us__title {
   margin: 30px 0;
@@ -794,28 +790,90 @@ img {
   width: 33px;
   height: 32px;
 }
+.about-us__list-item:last-child {
+  margin-bottom: 0;
+}
 @media (min-width: 768px) {
+  .about-us {
+    margin-bottom: 80px;
+  }
+  .about-us__wrapper {
+    width: auto;
+  }
   .about-us__title {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px 0;
+    font-size: 40px;
+    line-height: 50px;
   }
   .about-us__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
     font-size: 0;
   }
   .about-us__list-item {
-    display: inline-block;
+    width: 50%;
     vertical-align: top;
-    font-size: 18px;
-    width: 334px;
+    font-size: 20px;
+  }
+  .about-us__list-item--eko,
+  .about-us__list-item--ball {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .about-us__list-item--skan,
+  .about-us__list-item--rocket {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .about-us__list-item--hart {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .about-us__list-item--box {
+    -webkit-box-ordinal-group: 5;
+    -webkit-order: 4;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .about-us__list-item:nth-child(3n) {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .about-us__wrapper {
+    width: 87%;
+    max-width: 1050px;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1150px) {
+  .about-us {
+    margin-bottom: 90px;
+  }
+  .about-us__wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .about-us__title {
     margin-top: 65px;
     margin-bottom: 55px;
+    margin-left: 17%;
+    font-size: 50px;
+    line-height: 57px;
   }
   .about-us__list {
     margin-left: 175px;
@@ -825,17 +883,16 @@ img {
   }
 }
 .reviews {
-  width: 320px;
-  margin: 0 auto;
+  background-color: red;
+}
+.reviews__wrapper {
+  width: auto;
 }
 @media (min-width: 768px) {
-  .reviews {
-    width: 668px;
-  }
-}
-@media (min-width: 1150px) {
-  .reviews {
-    width: 1050px;
+  .reviews__wrapper {
+    width: 87%;
+    max-width: 1050px;
+    margin: 0 auto;
   }
 }
 .reviews__title {
@@ -885,10 +942,6 @@ img {
   float: right;
 }
 @media (min-width: 768px) {
-  .reviews__wrapper {
-    padding-top: 75px;
-    padding-bottom: 90px;
-  }
   .reviews__title {
     width: 334px;
     float: left;

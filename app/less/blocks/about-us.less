@@ -1,10 +1,10 @@
 .about-us {
   background: #ffffff url("../../img/zigzag-line-desktop.png") repeat-x;
   padding-top: 1px;
+  margin-bottom: 60px;
 }
 
 .about-us__wrapper {
-  .container-fluid();
   padding: 0 30px;
 }
 
@@ -77,15 +77,30 @@
   }
 }
 
+.about-us__list-item:last-child {
+  margin-bottom: 0;
+}
+
 
 @media @tablet-widths {
 
+  .about-us {
+    margin-bottom: 80px;
+  }
+
+  .about-us__wrapper {
+    .container-fluid();
+  }
+
   .about-us__title {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px 0;
+    font-size: 40px;
+    line-height: 50px;
   }
 
   .about-us__list {
+    display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -93,23 +108,56 @@
   }
 
   .about-us__list-item {
-    display: inline-block;
+    width: 50%;
     vertical-align: top;
-    font-size: 18px;
-    width: 334px;
+    font-size: 20px;
+
+    &--eko,
+    &--ball {
+      order: 1;
+    }
+
+    &--skan,
+    &--rocket {
+      order: 2;
+    }
+
+    &--hart {
+      order: 3;
+    }
+
+    &--box {
+      order: 4;
+    }
+  }
+
+  .about-us__list-item:nth-child(3n) {
+    margin-bottom: 0;
   }
 
 }
 
 @media @desktop-widths {
 
+  .about-us {
+    margin-bottom: 90px;
+  }
+
+  .about-us__wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .about-us__title {
     margin-top: 65px;
     margin-bottom: 55px;
+    margin-left: 17%;
+    font-size: 50px;
+    line-height: 57px;
   }
 
   .about-us__list {
-    margin-left: 175px;
+    margin-left: 175px;    
   }
 
   .about-us__list-item {
