@@ -1097,27 +1097,58 @@ img {
   }
 }
 .contacts {
-  background-color: green;
+  background: green url("../../img/zigzag-line-desktop.png") repeat-x top;
+  padding-top: 40px;
+  padding-bottom: 1px;
 }
 .contacts__wrapper {
-  width: 320px;
-  margin: 0 auto;
+  width: auto;
+  background-color: red;
 }
 @media (min-width: 768px) {
   .contacts__wrapper {
-    width: 668px;
+    width: 87%;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1150px) {
   .contacts__wrapper {
-    width: 1050px;
+    width: 91%;
+    max-width: 1050px;
   }
+}
+.contacts__title {
+  margin-bottom: 30px;
+  padding: 0 30px;
+  font: bold 24px/30px 'Tahoma', Arial, sans-serif;
+  background-color: blue;
+}
+.contacts__table {
+  width: 100%;
+  border-collapse: collapse;
+  font: normal 14px/30px 'OpenSans', Arial, sans-serif;
+  background-color: yellow;
+}
+.contacts__table td {
+  padding-bottom: 40px;
+  vertical-align: top;
+}
+.contacts__table-item {
+  padding-left: 8%;
+  width: 30%;
+}
+.contacts__table-value {
+  padding-right: 8%;
+  width: 70%;
 }
 .contacts__map {
   width: 320px;
   height: 457px;
   margin: 0 auto;
   background: url("../../img/map-mobile.jpg") no-repeat;
+}
+.contacts__write-btn {
+  margin: 40px 30px;
 }
 @media (min-width: 768px) {
   .contacts__map {
