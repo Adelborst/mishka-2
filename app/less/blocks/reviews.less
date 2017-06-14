@@ -1,7 +1,7 @@
 .reviews {
   margin-bottom: 45px;
-  background-color: red;
 }
+
 .reviews__wrapper {
   .container-fluid();
   padding: 0 30px;
@@ -10,7 +10,6 @@
 .reviews__title {
   margin: 0;
   font: bold 24px/30px @fontTahoma, Arial, sans-serif;
-  background-color: green;
   margin-bottom: 30px;
 }
 
@@ -19,10 +18,9 @@
   margin-bottom: 30px;
   padding: 0;
   list-style: none;
-  background-color: yellow;
 }
 
-.reviews__list-item {
+.reviews__list {
   font: normal 14px/30px @fontOpenSans, Arial, sans-serif;
   color: #444444;
 }
@@ -48,7 +46,6 @@
 
 .reviews__paging-btn {
   margin-bottom: 38px;
-  background-color: blue;
 }
 
 .reviews__paging-btn {
@@ -109,33 +106,28 @@
 @media @tablet-widths {
 
   .reviews {
-    background: url("../../img/review.jpg") no-repeat left center;
-    background: red;
     margin-bottom: 66px;
+    background: url("../../img/review.jpg") no-repeat;
   }
 
   .reviews__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
     padding-top: 80px;
   }
 
   .reviews__title {
-    // flex-basis: 74%;
     flex-grow: 1;
     order: 1;
     margin-bottom: 55px;
     font: bold 40px/50px @fontTahoma, Arial, sans-serif;
   }
+
   .reviews__list {
     order: 2;
     margin-bottom: 0;
-  }
-
-  .reviews__author {
-    width: 334px;
-    background-color: brown;
   }
 
   .reviews__paging-btn {
@@ -144,6 +136,10 @@
     margin-top: -52px;
     margin-left: auto;
     margin-bottom: 100px;
+  }
+
+  .reviews__btn {
+    border: none;
   }
 
   .reviews__ordered {
@@ -157,8 +153,29 @@
 
 @media @desktop-widths {
 
+  .reviews {
+    background: none;
+  }
+
   .reviews__wrapper {
-    padding-left: 175px;
+    background: url("../../img/review.jpg") no-repeat;
+  }
+
+  .reviews__title {
+    margin-left: 175px;
+    font-size: 50px;
+    line-height: 57px;
+  }
+
+  .reviews__list {
+    margin-left: 175px;
+    margin-right: 175px;
+    font-size: 16px;
+  }
+
+  .reviews__ordered,
+  .reviews__paging-btn {
+    flex-basis: 171px;
   }
 
 }
