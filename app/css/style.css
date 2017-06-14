@@ -415,6 +415,7 @@ img {
 .handmade {
   position: relative;
   background: #f9f9f9;
+  margin-bottom: 30px;
 }
 .handmade__wrapper {
   position: relative;
@@ -550,7 +551,8 @@ img {
 .featured__wrapper {
   width: auto;
   position: relative;
-  padding: 30px;
+  margin-bottom: 30px;
+  padding: 0 30px;
   font: normal 14px/24px 'OpenSans', Arial, sans-serif;
 }
 @media (min-width: 768px) {
@@ -718,23 +720,24 @@ img {
     width: 290px;
   }
 }
+.about-us {
+  background: #ffffff url("../../img/zigzag-line-desktop.png") repeat-x;
+  padding-top: 1px;
+}
 .about-us__wrapper {
-  width: 320px;
-  margin: 0 auto;
+  width: auto;
+  padding: 0 30px;
 }
 @media (min-width: 768px) {
   .about-us__wrapper {
-    width: 668px;
-  }
-}
-@media (min-width: 1150px) {
-  .about-us__wrapper {
-    width: 1050px;
+    width: 87%;
+    max-width: 1050px;
+    margin: 0 auto;
   }
 }
 .about-us__title {
-  margin-top: 38px;
-  margin-bottom: 30px;
+  margin: 30px 0;
+  font: bold 24px/30px 'Tahoma', Arial, sans-serif;
 }
 .about-us__list {
   margin: 0;
@@ -742,8 +745,54 @@ img {
   list-style: none;
 }
 .about-us__list-item {
-  width: 320px;
-  padding-top: 50px;
+  position: relative;
+  padding-top: 57px;
+  margin-bottom: 35px;
+  font: bold 16px 'Verdana', Arial, sans-serif;
+}
+.about-us__list-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 47px;
+  height: 57px;
+  background: url("../../img/sprite.png") no-repeat;
+}
+.about-us__list-item--eko::before {
+  left: 7px;
+  background-position: -540px 0px;
+  width: 32px;
+  height: 37px;
+}
+.about-us__list-item--skan::before {
+  background-position: -582px 0px;
+  width: 47px;
+  height: 27px;
+}
+.about-us__list-item--hart::before {
+  left: 7px;
+  background-position: -639px 0px;
+  width: 34px;
+  height: 27px;
+}
+.about-us__list-item--ball::before {
+  left: 2px;
+  background-position: -683px 0px;
+  width: 35px;
+  height: 34px;
+}
+.about-us__list-item--rocket::before {
+  left: -5px;
+  background-position: -728px 0px;
+  width: 55px;
+  height: 23px;
+}
+.about-us__list-item--box::before {
+  left: 2px;
+  background-position: -793px 0px;
+  width: 33px;
+  height: 32px;
 }
 @media (min-width: 768px) {
   .about-us__title {
@@ -809,8 +858,6 @@ img {
   margin: 35px;
 }
 .reviews__ordered {
-  display: block;
-  width: 100%;
   background-color: red;
 }
 .reviews__ordered--hidden1 {
