@@ -1,3 +1,4 @@
+// main-nav open-close
 var navMain = document.querySelector(".main-nav");
 var navToggle = navMain.querySelector(".main-nav__toggle");
 
@@ -12,7 +13,12 @@ navToggle.addEventListener('click', function() {
     navMain.classList.remove("main-nav--opened");
   }
 });
+// end main-nav open-close
 
+// reviews slider
+var reviewsList = document.querySelector(".reviews__wrapper");
+
+reviewsList.classList.remove("reviews--no-js");
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -36,3 +42,7 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
 }
+<<<<<<< HEAD
+=======
+// end reviews slider
+>>>>>>> adaptive-new

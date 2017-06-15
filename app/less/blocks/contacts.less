@@ -47,32 +47,68 @@
 }
 
 .contacts__write-btn {
-  margin: 40px 30px;
+  width: 320px;
+  margin: 40px auto;
 }
 
 
 @media @tablet-widths {
 
+  .contacts__title {
+    position: relative;
+    font-size: 40px;
+    line-height: 50px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -15px;
+      right: 0;
+      width: 47px;
+      height: 81px;
+      background: url("../../img/flag.png") no-repeat;
+    }
+  }
+
   .contacts__map {
-    width: 768px;
-    margin-left: -50px;
+    width: 668px;
+    height: 457px;
+    margin: 0 auto;
     background: url("../../img/map-tablet.jpg") no-repeat ;
+  }
+
+  .contacts__table tr {
+    display: inline-block;
+    background-color: blue;
+    vertical-align: top;
+    width: 50%;
   }
 
 }
 
 @media @desktop-widths {
 
+  .contacts {
+    padding-top: 60px;
+  }
+
   .contacts__wrapper {
     .clearfix();
     // padding-top: 70px;
     // padding-bottom: 100px;
+  }
+  .contacts__title {
+    font-size: 40px;
   }
 
   .contacts__info {
     float: left;
     width: 350px;
     padding-left: 175px;
+  }
+
+  .contacts__table {
+    font-size: 16px;
   }
 
   .contacts__map {
