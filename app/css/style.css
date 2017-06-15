@@ -1158,25 +1158,56 @@ img {
   background: url("../../img/map-mobile.jpg") no-repeat;
 }
 .contacts__write-btn {
-  margin: 40px 30px;
+  width: 320px;
+  margin: 40px auto;
 }
 @media (min-width: 768px) {
+  .contacts__title {
+    position: relative;
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .contacts__title::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: 0;
+    width: 47px;
+    height: 81px;
+    background: url("../../img/flag.png") no-repeat;
+  }
   .contacts__map {
-    width: 768px;
-    margin-left: -50px;
+    width: 668px;
+    height: 457px;
+    margin: 0 auto;
     background: url("../../img/map-tablet.jpg") no-repeat;
+  }
+  .contacts__table tr {
+    display: inline-block;
+    background-color: blue;
+    vertical-align: top;
+    width: 50%;
   }
 }
 @media (min-width: 1150px) {
+  .contacts {
+    padding-top: 60px;
+  }
   .contacts__wrapper::after {
     content: "";
     display: table;
     clear: both;
   }
+  .contacts__title {
+    font-size: 40px;
+  }
   .contacts__info {
     float: left;
     width: 350px;
     padding-left: 175px;
+  }
+  .contacts__table {
+    font-size: 16px;
   }
   .contacts__map {
     float: right;
