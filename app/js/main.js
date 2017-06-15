@@ -1,3 +1,4 @@
+// main-nav open-close
 var navMain = document.querySelector(".main-nav");
 var navToggle = navMain.querySelector(".main-nav__toggle");
 
@@ -12,7 +13,12 @@ navToggle.addEventListener('click', function() {
     navMain.classList.remove("main-nav--opened");
   }
 });
+// end main-nav open-close
 
+// reviews slider
+var reviewsList = document.querySelector(".reviews__wrapper");
+
+reviewsList.classList.remove("reviews--no-js");
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -36,23 +42,4 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
 }
-
-
-// var slider = document.querySelector(".slider");
-// // var sliderItem = slider.querySelector(".slider-item");
-// var slide_left = slider.querySelector(".reviews__btn--prev");
-// var slide_right = slider.querySelector(".reviews__btn--right");
-// var slideNum = slider.getElementsByTagName('li').length; // считаем сколько отзывов заложено в слайдер
-// var now = 0; // первым будет выведен отзыв с индексом 0
-// var sliderOffset = [];
-// for (var i = 0; i < slideNum; i++) sliderOffset.push(-i * 104 + 'px'); // создаем массив с вариантами смещения слайдера для каждой картинки
-//   slide_left.onclick = function() {
-//     --now;// уменьшаем индекс картинки
-//     if(now < 0) now = slideNum - 1; // если залезли в отрицательную область, делаем текущей последнюю картинку
-//       slider.style.left = sliderOffset[now]; //смещаем слайдер в соответствии с текущей картинкой
-//     }
-//   slide_right.onclick = function() {
-//     ++now; // увеличиваем индекс картинки
-//     if(now > slideNum - 1) now = 0; // если индекс больше, чем может быть, делаем текущей первую картинку
-//       slider.style.left = sliderOffset[now]; // см. выше
-//     }
+// end reviews slider
