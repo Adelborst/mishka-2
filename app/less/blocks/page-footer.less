@@ -3,7 +3,7 @@
 }
 
 .page-footer__wrapper {
-  .container();
+  .container-fluid();
 }
 
 .page-footer__logo--hidden {
@@ -12,56 +12,145 @@
 
 .page-footer__social,
 .page-footer__copyright {
-  text-align: center;
+  margin: 0;
   padding-top: 30px;
   padding-bottom: 30px;
+  text-align: center;
+
 }
 
 .page-footer__social {
   border-bottom: 1px solid #e5e5e5;
 }
 
+.social-link {
+  display: inline-block;
+  vertical-align: middle;
+  width: 23px;
+  height: 28px;
+  margin-right: 35px;
+  font-size: 0;
+  background: url("../../img/sprite.png") no-repeat;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--inst {
+    background-position: -1271px 0px;
+    width: 22px;
+    height: 21px;
+
+    &:hover {
+      background-position: -1335px 0px;
+    }
+    &:active {
+      background-position: -1303px 0px;
+    }
+  }
+
+
+  &--fb {
+    background-position: -1196px 0px;
+    width: 15px;
+    height: 28px;
+
+    &:hover {
+      background-position: -1246px 0px;
+    }
+    &:active {
+      background-position: -1221px 0px;
+    }
+  }
+
+  &--tw {
+    background-position: -1367px 0px;
+    width: 23px;
+    height: 20px;
+
+    &:hover {
+      background-position: -1434px 0px;
+    }
+    &:active {
+      background-position:  -1400px 0px;
+    }
+  }
+
+}
+
+.page-footer__copyright {
+  font: bold 18px/18px @fontTahoma, Arial, sans-serif;
+}
+
+.page-footer__copyright-link {
+  display: inline-block;
+  vertical-align: middle;
+  width: 27px;
+  height: 34px;
+  margin-left: 25px;
+  font-size: 0;
+  background: url("../../img/sprite.png") no-repeat;
+  background-position: -1468px 0px;
+
+  &:hover {
+    background-position: -1542px 0px;
+  }
+  &:active {
+    background-position: -1505px 0px;
+  }
+}
+
+
 @media @tablet-widths {
 
   .page-footer__wrapper {
-    .clearfix();    
+    display: flex;
+    justify-content: space-between;
     padding-top: 45px;
     padding-bottom: 55px;
   }
 
+  .page-footer__logo {
+    margin: 0;
+    background: url("../../img/sprite.png") no-repeat;
+    background-position: -1579px 0px;
+    width: 102px;
+    margin-right: 14.6%;
+
+    &:hover {
+      background-position: -1803px 0px;
+    }
+    &:active {
+      background-position: -1691px 0px;
+    }
+  }
+
   .page-footer__logo--hidden {
-    float: left;
     display: block;
-    width: 167px;
   }
 
   .page-footer__social {
-    float: left;
-    width: 316px;
+    // width: 40%;
     padding: 0;
+    padding-top: 5px;
     border-bottom: none;
   }
 
   .page-footer__copyright {
-    float: right;
-    width: 185px;
+    width: 30%;
     padding: 0;
+    padding-top: 3px;
   }
 
 }
 
 @media @desktop-widths {
-
-  .page-footer__logo--hidden {
-    width: 175px;
+  .page-footer {
+    padding-top: 10px;
+    padding-bottom: 7px;
   }
-
-  .page-footer__social {
-    width: 685px;
-  }
-
   .page-footer__copyright {
-    width: 190px;
+    text-align: right;
   }
 
 }
