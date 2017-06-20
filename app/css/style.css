@@ -805,12 +805,12 @@ img {
   left: 7px;
   background-position: -540px 0px;
   width: 32px;
-  height: 37px;
+  height: 38px;
 }
 .about-us__list-item--skan::before {
   background-position: -582px 0px;
   width: 47px;
-  height: 27px;
+  height: 31px;
 }
 .about-us__list-item--hart::before {
   left: 7px;
