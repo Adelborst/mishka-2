@@ -16,7 +16,7 @@
   }
 
   &:active {
-    opacity: 0.3;
+    opacity: .3;
   }
 }
 
@@ -29,14 +29,25 @@
     border: none;
   }
 
+  .page-header__logo img {
+    width: 113px;
+    height: 46px;
+  }
+
 }
 
 @media @desktop-widths {
 
   .page-header__logo {
     width: 150px;
+    padding: 7px 0;
     text-align: center;
     order: 5;
+  }
+
+  .page-header__logo img {
+    width: 149px;
+    height: 72px;
   }
 
 }

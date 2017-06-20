@@ -70,7 +70,7 @@ img {
   opacity: .5;
 }
 .page-header__logo img:active {
-  opacity: 0.3;
+  opacity: .3;
 }
 @media (min-width: 768px) {
   .page-header__logo {
@@ -79,15 +79,24 @@ img {
     text-align: left;
     border: none;
   }
+  .page-header__logo img {
+    width: 113px;
+    height: 46px;
+  }
 }
 @media (min-width: 1150px) {
   .page-header__logo {
     width: 150px;
+    padding: 7px 0;
     text-align: center;
     -webkit-box-ordinal-group: 6;
     -webkit-order: 5;
         -ms-flex-order: 5;
             order: 5;
+  }
+  .page-header__logo img {
+    width: 149px;
+    height: 72px;
   }
 }
 .main-nav {
@@ -377,7 +386,6 @@ img {
     -webkit-order: 10;
         -ms-flex-order: 10;
             order: 10;
-    background-color: red;
   }
   .main-nav__item a {
     width: 167px;
