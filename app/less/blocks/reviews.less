@@ -88,6 +88,11 @@
     margin-left: -25px;
     margin-top: -13px;
     background: url("../../img/sprite.png") no-repeat;
+
+    @media @retina {
+      background-image: url("../../img/sprite-2x.png");
+      background-size: 1905px auto;
+    }
   }
 
   &--prev::before {

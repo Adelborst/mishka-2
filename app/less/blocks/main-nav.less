@@ -115,6 +115,11 @@
     height: 22px;
     cursor: pointer;
     background: url("../../img/sprite.png") no-repeat top left;
+
+    @media @retina {
+      background-image: url("../../img/sprite-2x.png");
+      background-size: 1905px auto;
+    }
   }
 
   &--search::before {

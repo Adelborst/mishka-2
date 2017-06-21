@@ -214,6 +214,14 @@ img {
   cursor: pointer;
   background: url("../../img/sprite.png") no-repeat top left;
 }
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .main-nav__user-item--search::before,
+  .main-nav__user-item--basket::before {
+    background-image: url("../../img/sprite-2x.png");
+    -webkit-background-size: 1905px auto;
+            background-size: 1905px auto;
+  }
+}
 .main-nav__user-item--search::before {
   background-position: -93px 0px;
   width: 18px;
@@ -483,6 +491,13 @@ img {
   background: url("../../img/sprite.png") no-repeat;
   background-position: -177px 0px;
 }
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .handmade__item--interior::before {
+    background-image: url("../../img/sprite-2x.png");
+    -webkit-background-size: 1905px auto;
+            background-size: 1905px auto;
+  }
+}
 .handmade__item--interior:hover::before {
   background-position: -279px 0px;
 }
@@ -505,6 +520,13 @@ img {
   height: 61px;
   background: url("../../img/sprite.png") no-repeat;
   background-position: -330px 0px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .handmade__item--toy::before {
+    background-image: url("../../img/sprite-2x.png");
+    -webkit-background-size: 1905px auto;
+            background-size: 1905px auto;
+  }
 }
 .handmade__item--toy:hover::before {
   background-position: -470px 0px;
@@ -801,6 +823,13 @@ img {
   height: 57px;
   background: url("../../img/sprite.png") no-repeat;
 }
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .about-us__list-item::before {
+    background-image: url("../../img/sprite-2x.png");
+    -webkit-background-size: 1905px auto;
+            background-size: 1905px auto;
+  }
+}
 .about-us__list-item--eko::before {
   left: 7px;
   background-position: -540px 0px;
@@ -1026,6 +1055,13 @@ img {
   margin-left: -25px;
   margin-top: -13px;
   background: url("../../img/sprite.png") no-repeat;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .reviews__btn::before {
+    background-image: url("../../img/sprite-2x.png");
+    -webkit-background-size: 1905px auto;
+            background-size: 1905px auto;
+  }
 }
 .reviews__btn--prev::before {
   background-position: -836px 0px;
@@ -1330,6 +1366,13 @@ img {
   font-size: 0;
   background: url("../../img/sprite.png") no-repeat;
 }
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .social-link {
+    background-image: url("../../img/sprite-2x.png");
+    -webkit-background-size: 1905px auto;
+            background-size: 1905px auto;
+  }
+}
 .social-link:last-child {
   margin-right: 0;
 }
@@ -1379,6 +1422,13 @@ img {
   background: url("../../img/sprite.png") no-repeat;
   background-position: -1468px 0px;
 }
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .page-footer__copyright-link {
+    background-image: url("../../img/sprite-2x.png");
+    -webkit-background-size: 1905px auto;
+            background-size: 1905px auto;
+  }
+}
 .page-footer__copyright-link:hover {
   background-position: -1542px 0px;
 }
@@ -1423,6 +1473,13 @@ img {
     width: 30%;
     padding: 0;
     padding-top: 3px;
+  }
+}
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 768px) and (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  .page-footer__logo {
+    background-image: url("../../img/sprite-2x.png");
+    -webkit-background-size: 1905px auto;
+            background-size: 1905px auto;
   }
 }
 @media (min-width: 1150px) {
