@@ -1231,8 +1231,8 @@ img {
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .contacts__map {
     background-image: url("../../img/map-mobile-2x.jpg");
-    -webkit-background-size: 320px 320px;
-            background-size: 320px;
+    -webkit-background-size: 320px auto;
+            background-size: 320px auto;
   }
 }
 .contacts__write-btn {
