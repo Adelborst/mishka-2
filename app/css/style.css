@@ -1113,6 +1113,13 @@ img {
             order: 1;
   }
 }
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 768px) and (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx) {
+  .reviews {
+    background-image: url("../../img/review-2x.jpg");
+    -webkit-background-size: 350px auto;
+            background-size: 350px auto;
+  }
+}
 @media (min-width: 1150px) {
   .reviews {
     background: none;
