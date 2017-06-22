@@ -9,8 +9,11 @@ var gulp = require('gulp'), // подключаем пакеты Gulp из па�
     del = require('del'), // подключаем библиотеку для удаления файлов и папок
     imagemin = require('gulp-imagemin'), // подключаем библиотеку для работы с изображениями
     pngquant = require('imagemin-pngquant'), // подключаем библиотеку для работы с png
-    cache = require('gulp-cache'); // подключаем библиотеку кеширования
+    cache = require('gulp-cache'), // подключаем библиотеку кеширования
     autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+var svgSprite = require("gulp-svg-sprites"),
+    // filter    = require('gulp-filter'),
+    svg2png   = require('gulp-svg2png');
 
 gulp.task('less', function () { // Создаем таск "less"
   return gulp.src([
@@ -84,6 +87,15 @@ gulp.task('img', function() {
             use: [pngquant()]
         })))
         .pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
+});
+
+gulp.task('sprites', function () {
+    return gulp.src('app/img/svg/*.svg')
+        .pipe(svgSprite())
+        .pipe(gulp.dest("app/img/svg")) // Write the sprite-sheet + CSS + Preview
+        // .pipe(filter("**/*.svg"))  // Filter out everything except the SVG file
+        .pipe(svg2png())           // Create a PNG
+        .pipe(gulp.dest("app/img/svg"));
 });
 
 gulp.task('build', ['clean', 'img', 'less', 'scripts'], function() {
