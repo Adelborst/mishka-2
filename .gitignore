@@ -1,5 +1,10 @@
-.idea
-media/
-*.log
-*/*.log
+build/
 node_modules/
+.DS_Store
+Thumbs.db
+.idea
+*.log
+*.psd
+*.ai
+*.pdf
+css/*.css
