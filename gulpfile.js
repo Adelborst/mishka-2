@@ -21,7 +21,6 @@ gulp.task("clean", function () { // удаляет build
 gulp.task("copy", function() { // копирует необходимые файлы в build
   return gulp.src([
     "fonts/**/*.{woff,woff2}",
-    "css/normalize.css",
     "img/**",
     "js/**",
     "*.html"
@@ -40,10 +39,7 @@ gulp.task("copyhtml", function() { // копирует html в build
   .pipe(server.reload({stream: true})); // команда перезагрузки странички
 });
 gulp.task("style", function() { // создание таска style
-  gulp.src([
-    'less/style.less',
-    'less/normalize.less'
-    ]) // путь к less файлам
+  gulp.src('less/style.less') // путь к less файлам
   .pipe(plumber()) // чтобы не падал процесс автоматизации при ошибках
   .pipe(less()) // проганяем через компилятор less
   .pipe(postcss([
@@ -64,8 +60,10 @@ gulp.task("style", function() { // создание таска style
   .pipe(server.reload({stream: true})); // команда перезагрузки странички
 });
 gulp.task("normalize", function () {
-  gulp.src("css/normalize.css")
-  .pipe(minify()) // минифицируем
+  gulp.src('less/normalize.less')
+  .pipe(less())
+  .pipe(gulp.dest("build/css"))
+  .pipe(minify()) // минифицируем  
   .pipe(rename("normalize.min.css"))
   .pipe(gulp.dest("build/css"))
 })
