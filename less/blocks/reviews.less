@@ -87,32 +87,28 @@
     height: 26px;
     margin-left: -25px;
     margin-top: -13px;
-    background: url("../../img/sprite.png") no-repeat;
-
-    @media @retina {
-      background-image: url("../../img/sprite-2x.png");
-      background-size: 1905px auto;
-    }
+    background: url("../../img/sprite.svg") no-repeat;
+    cursor: pointer;
   }
 
   &--prev::before {
-    background-position: -836px 0px;
+    background-position: 100% 0;
   }
   &--prev:hover::before {
-    background-position: -956px 0px;
+    background-position: 59.24657534246575% 23.050847457627118%;
   }
   &--prev:active::before {
-    background-position: -896px 0px;
+    background-position: 42.12328767123287% 23.050847457627118%;
   }
 
   &--next::before {
-    background-position: -1016px 0px;
+    background-position: 100% 8.813559322033898%;
   }
   &--next:hover::before {
-    background-position: -1136px 0px;
+    background-position: 52.054794520547944% 31.864406779661017%;
   }
   &--next:active::before {
-    background-position: -1076px 0px;
+    background-position: 34.93150684931507% 31.864406779661017%;
   }
 }
 
