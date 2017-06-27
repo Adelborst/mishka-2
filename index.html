@@ -2,7 +2,6 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mishka</title>
   <link href="css/normalize.min.css" rel="stylesheet">
   <link href="css/style.min.css" rel="stylesheet">
@@ -10,7 +9,6 @@
 <body>
   <header class="page-header">
     <h1 class="visually-hidden">Mishka</h1>
-
     <nav class="main-nav  main-nav--closed  main-nav--nojs">
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
@@ -36,132 +34,49 @@
         <p class="main-nav__deliver">Бесплатная доставка по России</p>
       </div>
     </nav>
-    <div class="handmade">
-      <div class="handmade__wrapper">
-        <h2 class="handmade__title">Милые штуки <br> ручной <br> работы для дома</h2>
-        <ul class="handmade__items">
-          <li class="handmade__item  handmade__item--interior">
-            <a href="" class="handmade__item-title">Предметы <br> интерьера</a>
-          </li>
-          <li class="handmade__item  handmade__item--toy">
-            <a href="" class="handmade__item-title">Детские <br> игрушки</a>
-          </li>
-        </ul>
-      </div>
-    </div>
   </header>
-  <section class="featured">
-    <div class="featured__wrapper">
-      <h2 class="featured__title">Вязаные корзинки</h2>
-      <p class="featured__label">Товар <br> недели</p>
-      <div class="featured__intro">
-        <p class="featured__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах</p>
-        <table class="featured__info">
-          <tr>
-            <td class="featured__parametr">Цвет:</td>
-            <td class="featured__value">&laquo;Тиффани&raquo;/серый</td>
-          </tr>
-          <tr>
-            <td class="featured__parametr">Диаметр:</td>
-            <td class="featured__value">25 см</td>
-          </tr>
-          <tr>
-            <td class="featured__parametr">Высота:</td>
-            <td class="featured__value">15 см</td>
-          </tr>
-        </table>
-      </div>
-      <div class="featured__img">
-        <img src="img/triple-set.jpg" width="525" srcset="img/triple-set-2x.jpg 2x" alt="Вязаные корзинки">
-      </div>
-      <div class="feature__ordered">
-        <p class="featured__price">Цена: 990 руб.</p>
-        <a class="btn " href="#">Заказать</a>
-      </div>
+  <section class="catalog">
+    <h2 class="catalog__title">Каталог товаров</h2>
+    <div class="catalog__wrapper">
+      <article class="catalog__item">
+        <img class="catalog__item-img" src="img/zaychik-mobile.jpg" width="260" height="195" alt="Зайчик">
+        <div class="catalog__item-info">
+          <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
+          <p class="catalog__item-desc">Рост 30 см, вес 200 г</p>
+          <p class="catalog__item-price">1 200 руб.</p>
+        </div>
+      </article>
+      <article class="catalog__item">
+        <img class="catalog__item-img" src="img/basket-item-mobile.jpg" width="260" height="195" alt="Зайчик">
+        <div class="catalog__item-info">
+          <h3 class="catalog__item-title">Корзина для белья</h3>
+          <p class="catalog__item-desc">Диаметр 15 см, высота 10 см</p>
+          <b class="catalog__item-price">690 руб.</b>
+        </div>
+      </article>
+      <article class="catalog__item">
+        <img class="catalog__item-img" src="img/basket-big-item-mobile.jpg" width="260" height="195" alt="Зайчик">
+        <div class="catalog__item-info">
+          <h3 class="catalog__item-title">Большая корзина для игрушек</h3>
+          <p class="catalog__item-desc">Диаметр 30 см, высота 30 см</p>
+          <b class="catalog__item-price">1 500 руб.</b>
+        </div>
+      </article>
     </div>
   </section>
-  <section class="about-us">
-    <div class="about-us__wrapper">
-      <h2 class="about-us__title">Коротко о нас:</h2>
-      <ul class="about-us__list">
-        <li class="about-us__list-item  about-us__list-item--eko">Экологически <br> чистые материалы</li>
-        <li class="about-us__list-item  about-us__list-item--skan">Скандинавский стиль <br> по российской цене</li>
-        <li class="about-us__list-item  about-us__list-item--hart">Увеличивает лайки <br> на фотографиях</li>
-        <li class="about-us__list-item  about-us__list-item--ball">Связано вручную с <br> любовью и уважением</li>
-        <li class="about-us__list-item  about-us__list-item--rocket">Поддержка отечественного <br> производителя</li>
-        <li class="about-us__list-item  about-us__list-item--box">Поставляется в <br> подарочной упаковке</li>
-      </ul>
-    </div>
-  </section>
-  <section class="reviews">
-    <div class="reviews__wrapper reviews--no-js">
-      <h2 class="reviews__title">Отзывы</h2>
-      <ul class="reviews__list">
-        <li class="reviews__list-item slider-item">
-          <blockquote class="reviews__desc">
-            <p>
-              Я молодая мама, но все равно фотографии не набирали и близко того количества
-              лайков, как у полулярных инстамамочек. В отчаянии, я накупиа аксесуаров  и
-              игрушек в Мишке и мои фотографии сразу стали более стильнее, а также
-              набирают больше лайков!
-            </p>
-            <cite class="reviews__author">
-              Анастасия Красильникова<br> <span class="reviews__author-email">@misssssiskras</span>
-            </cite>
-          </blockquote>
-        </li>
-        <li class="reviews__list-item slider-item">
-          <blockquote class="reviews__desc">
-            <p>
-              В отчаянии, я накупиа аксесуаров  и
-              игрушек в Мишке и мои фотографии сразу стали более стильнее, а также
-              набирают больше лайков!
-              Я молодая мама, но все равно фотографии не набирали и близко того количества
-              лайков, как у полулярных инстамамочек.
-            </p>
-            <cite class="reviews__author">
-              Красильникова fgsdfgsd <br> <span class="reviews__author-email">@qweasdsiskras</span>
-            </cite>
-          </blockquote>
-        </li>
-        <li class="reviews__list-item slider-item">
-          <blockquote class="reviews__desc">
-            <p>
-            Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн.
-            </p>
-            <cite class="reviews__author">
-              Oleg Moskalenko <br> <span class="reviews__author-email">@areshka</span>
-            </cite>
-          </blockquote>
-        </li>
-      </ul>
-
-      <div class="reviews__paging-btn">
-        <button class="reviews__btn  reviews__btn--prev" onclick="plusSlides(-1)" >Предыдущий отзыв</button>
-        <button class="reviews__btn  reviews__btn--next" onclick="plusSlides(1)" >Следующий отзыв</button>
+  <section class="video">
+    <div class="video__wrapper">
+      <h3 class="video__title">Процесс производства</h3>
+      <div class="video__video">
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/-crR4GM3t_g" frameborder="0" allowfullscreen></iframe>
+        <video src="video/мастер класс по вязанию корзинки крючком).mp4" controls poster="img/video-basket-mobile.jpg">
+        </video> -->
       </div>
-      <a class="btn  reviews__ordered" href="#">Написать</a>
-    </div>
-  </section>
-  <section class="contacts">
-    <div class="contacts__wrapper">
-      <div class="contacts__info">
-        <h2 class="contacts__title">Контакты</h2>
-        <table class="contacts__table">
-          <tr>
-            <td class="contacts__table-item">e-mail:</td>
-            <td class="contacts__table-value">info@mimimishkashop.ru</td>
-          </tr>
-          <tr>
-            <td class="contacts__table-item">адрес:</td>
-            <td class="contacts__table-value">г. Санкт-Петербург, <br> ул. Большая Кошенная, <br> д. 19/8, офис 101</td>
-          </tr>
-        </table>
-      </div>
-      <div class="contacts__map">
-        <!-- <img src="img/map-mobile.jpg" alt="Наш адрес"> -->
-      </div>
-      <a class="btn contacts__write-btn" href="#">Напишите нам</a>
+      <p class="video__decr">
+        По прозьбам наших любимых фолловеров мы сняли для вас подробное видео о том,
+         как появляются наши товары.
+      </p>
+      <a class="btn" href="#">Сделать заказ</a>
     </div>
   </section>
   <footer class="page-footer">
@@ -182,6 +97,7 @@
         </p>
       </div>
     </footer>
-  <script src="js/main.min.js"></script>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

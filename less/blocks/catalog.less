@@ -1,0 +1,80 @@
+.catalog {
+  background-color: red;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.catalog__title {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 75px 0;
+  font: bold 24px/30px @fontTahoma, Arial, sans-serif;
+  background-color: green;
+}
+
+.catalog__wrapper {
+  padding: 0 30px;
+}
+
+.catalog__item {
+  width: 260px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ececec;
+  background-color: yellow;
+}
+
+.catalog__item:last-child {
+  margin-bottom: 0;
+}
+
+.catalog__item-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.catalog__item-info {
+  padding: 27px;
+}
+
+.catalog__item-title {
+  margin: 0;
+  margin-bottom: 6px;
+  padding: 0;
+  font: bold 16px/24px @fontVerdana, Arial, sans-serif;
+  background-color: red;
+}
+
+.catalog__item-desc {
+  margin: 0;
+  margin-bottom: 27px;
+  padding: 0;
+  padding-bottom: 20px;
+  font: normal 14px/30px @fontOpenSansRegular, Arial, sans-serif;
+  border-bottom: 1px solid #ececec;
+  background-color: green;
+}
+
+.catalog__item-price {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font: bold 14px/24px @fontVerdana, Arial, sans-serif;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 21px;
+  	height: 18px;
+    background: url("../../img/sprite.svg") no-repeat 47.0404984423676% 88.44884488448845%;
+  }
+}
+// @media (min-width: 520px) {
+//   .catalog__wrapper {
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-around;
+//     align-items: stretch;
+//   }
+// }
