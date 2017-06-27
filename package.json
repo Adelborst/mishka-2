@@ -25,6 +25,7 @@
     "gulp-svgmin": "^1.2.4",
     "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^3.0.0",
+    "normalize.less": "^1.0.0",
     "run-sequence": "^1.2.2"
   }
 }

@@ -31,7 +31,7 @@ gulp.task("copy", function() { // копирует необходимые фай
   .pipe(gulp.dest("build"));
 });
 gulp.task("copyhtml", function() { // копирует html в build
-  return gulp.src([   
+  return gulp.src([
     "*.html"
   ], {
     base: "." // если не указать то все файлы будут лежать в корне, а не по папкам
@@ -40,7 +40,10 @@ gulp.task("copyhtml", function() { // копирует html в build
   .pipe(server.reload({stream: true})); // команда перезагрузки странички
 });
 gulp.task("style", function() { // создание таска style
-  gulp.src("less/style.less") // путь к less файлам
+  gulp.src([
+    'less/style.less',
+    'less/normalize.less'
+    ]) // путь к less файлам
   .pipe(plumber()) // чтобы не падал процесс автоматизации при ошибках
   .pipe(less()) // проганяем через компилятор less
   .pipe(postcss([
@@ -56,7 +59,7 @@ gulp.task("style", function() { // создание таска style
   ]))
   .pipe(gulp.dest("build/css")) // исходный результат записываем в css
   .pipe(minify()) // минифицируем
-  .pipe(rename("style.min.css"))
+  .pipe(rename({suffix: '.min'}))
   .pipe(gulp.dest("build/css"))
   .pipe(server.reload({stream: true})); // команда перезагрузки странички
 });
@@ -75,7 +78,7 @@ gulp.task("images", function() { // создание таска images
     .pipe(gulp.dest("build/img")); // указываем куда ложить минифицированные изображения
 })
 gulp.task('sprite', function () {
-	return gulp.src("build/img/icons/*.svg")
+	return gulp.src("build/img/svg/*.svg")
     .pipe(sgvSprite({
       shape: {
         spacing: {			// Add padding
