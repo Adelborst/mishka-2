@@ -63,7 +63,7 @@ gulp.task("normalize", function () {
   gulp.src('less/normalize.less')
   .pipe(less())
   .pipe(gulp.dest("build/css"))
-  .pipe(minify()) // минифицируем  
+  .pipe(minify()) // минифицируем
   .pipe(rename("normalize.min.css"))
   .pipe(gulp.dest("build/css"))
 })
@@ -77,12 +77,13 @@ gulp.task("images", function() { // создание таска images
 })
 gulp.task('sprite', function () {
 	return gulp.src("build/img/svg/*.svg")
+    .pipe(svgmin())
     .pipe(sgvSprite({
-      shape: {
-        spacing: {			// Add padding
-          padding: 5
-        }
-      },
+      // shape: {
+      //   spacing: {			// Add padding
+      //     padding: 5
+      //   }
+      // },
       mode: {
         css: {
           render: {
