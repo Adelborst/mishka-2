@@ -1,0 +1,86 @@
+.video {
+  margin-bottom: 58px;
+  // background-color: red;
+}
+
+.video__wrapper {
+  margin: 0 30px;
+  border: 1px solid #ececec;
+  // background-color: green;
+}
+
+.video__wrapper:hover {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+}
+
+.video__wrapper:active {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .1);
+}
+
+.video__title {
+  position: relative;
+  margin: 0;
+  padding: 24px 35px 24px 90px;
+  font: bold 16px/24px @fontVerdana, Arial, sans-serif;
+  // background-color: blue;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 33px;
+    left: 30px;
+    width: 32px;
+    height: 22px;
+    background: url("../../img/sprite.svg") 94.19354838709677% 81.93979933110369% no-repeat;
+  }
+}
+.video__box {
+  position: relative;
+  // background: yellow;
+}
+
+.video__player {
+  width: 100%;
+  // background-color: brown;
+}
+
+.video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -40px;
+  margin-left: -49px;
+  width: 101px;
+  height: 78px;
+  font-size: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: url("../../img/sprite.svg") 0 52.674897119341566% no-repeat;
+  transition: 1s;
+  &:hover {
+    background-position: 0 0;
+    width: 123px;
+    height: 94px;
+    margin-top: -48px;
+    margin-left: -60px;
+  }
+  &:active {
+    background-position: 38.69731800766284% 49.42084942084942%;
+    width: 81px;
+    height: 62px;
+    margin-top: -32px;
+    margin-left: -39px;
+  }
+}
+
+.video__desc {
+  margin: 0;
+  padding: 30px 35px;
+  font: normal 14px/24px @fontOpenSansRegular, Arial, sans-serif;
+}
+
+.video__wrapper .btn {
+  width: 192px;
+  margin-bottom: 30px;
+}
