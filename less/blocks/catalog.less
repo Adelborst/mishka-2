@@ -1,5 +1,4 @@
 .catalog {
-  // background-color: red;
   margin: 0 auto;
   margin-bottom: 30px;
 }
@@ -22,7 +21,6 @@
   margin: 0 auto;
   margin-bottom: 30px;
   border: 1px solid #ececec;
-  // background-color: yellow;
   cursor: pointer;
 }
 
@@ -46,12 +44,10 @@
 
 .catalog__item-info {
   padding: 25px;
-  // background-color: gray;
   padding-bottom: 0;
 }
 
 .catalog__item-info--box {
-    // background: brown;
     padding: 0;
     padding-bottom: 20px;
     margin-bottom: 26px;
@@ -61,17 +57,14 @@
   margin: 0;
   margin-bottom: 6px;
   font: bold 16px/24px @fontVerdana, Arial, sans-serif;
-  // background-color: red;
 }
 
 .catalog__item-desc {
   margin: 0;
   font: normal 14px/30px @fontOpenSansRegular, Arial, sans-serif;
-  // background-color: green;
 }
 
 .catalog__item-price {
-  // background-color: blue;
   position: relative;
   margin: 0;
   padding: 26px 0;
@@ -164,8 +157,34 @@
 
 @media @desktop-widths {
 
+  .catalog {
+    margin-bottom: 60px;
+  }
+
+  .catalog__wrapper {
+    display: flex;
+  }
+
+  .catalog__title {
+    margin-bottom: 130px;
+    padding: 100px 0 110px 0;
+    font-size: 50px;
+    line-height: 57px;
+  }
+
+  .catalog__item {
+    flex-direction: column;
+    flex-basis: 316px;
+    margin-bottom: 0;
+  }
+
+  .catalog__item-info--box {
+    margin-bottom: 10px;
+  }
+
   .catalog__item-img {
     width: 316px;
+    height: 462px;
   }
 
 }
