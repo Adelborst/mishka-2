@@ -1,0 +1,176 @@
+.video {
+  margin-bottom: 58px;
+  // background-color: red;
+}
+
+.video__wrapper {
+  margin: 0 30px;
+  border: 1px solid #ececec;
+  // background-color: green;
+}
+
+.video__wrapper:hover {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+}
+
+.video__wrapper:active {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .1);
+}
+
+.video__title {
+  position: relative;
+  margin: 0;
+  padding: 24px 35px 24px 90px;
+  font: bold 16px/24px @fontVerdana, Arial, sans-serif;
+  // background-color: blue;
+
+  &-icon {
+    position: absolute;
+    top: 28px;
+    left: 30px;
+    width: 32px;
+  	height: 32px;
+    fill: #63d1bb;
+  }
+}
+
+.video__box {
+  position: relative;
+  // background: yellow;
+}
+
+.video__player {
+  width: 100%;
+  // background-color: brown;
+}
+
+.video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -40px;
+  margin-left: -49px;
+  font-size: 0;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+
+
+  &-icon {
+    width: 100.678px;
+    height: 76.891px;
+    fill: #62d1ba;
+    color: #ffffff;
+    transition: .5s;
+
+     &:hover {
+      transform: scale(1.2, 1.2);
+     }
+
+     &:active {
+      transform: scale(0.8, 0.8);
+      opacity: .5;
+     }
+  }
+
+}
+
+.video__desc {
+  margin: 0;
+  padding: 30px 35px;
+  font: normal 14px/24px @fontOpenSansRegular, Arial, sans-serif;
+}
+
+.video__wrapper .btn {
+  width: 84%;
+  margin-bottom: 30px;
+}
+
+@media @tablet-widths {
+
+  .video {
+    margin-bottom: 65px;
+  }
+
+  .video__wrapper {
+    .container-fluid();
+    display: flex;
+    flex-direction: column;
+  }
+
+  .video__title {
+    order: 1;
+    padding: 0;
+    margin: 37px 0 40px 0;
+    padding: 0 40px 0 105px;
+    font-size: 18px;
+
+    &-icon {
+      top: -5px;
+      left: 40px;
+    }
+  }
+
+  .video__title br {
+    display: none;
+  }
+
+  .video__desc {
+    order: 1;
+    margin-bottom: 33px;
+    padding: 0 40px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .video__wrapper .btn {
+    order: 1;
+    width: 89%;
+    margin-bottom: 45px;
+  }
+
+}
+
+@media @tablet-widths {
+
+  .video {
+    margin-bottom: 105px;
+  }
+
+  .video__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .video__box {
+    width: 685px;;
+  }
+
+  .video__title {
+    width: 285px;
+    margin: 0;
+    margin-left: 20px;
+    margin-top: 45px;
+    padding: 0;
+    padding-top: 54px;
+    padding-left: 60px;
+    background-color: red;
+
+    &-icon {
+      left: 60px;
+    }
+  }
+
+  .video__title br {
+    display: block;
+  }
+
+  .video__desc {
+    width: 285px;
+    padding: 0;
+    margin: 0;
+    background-color: green;
+  }
+
+}
