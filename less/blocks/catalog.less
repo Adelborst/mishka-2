@@ -24,6 +24,12 @@
   cursor: pointer;
 }
 
+.catalog__item a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+}
+
 .catalog__item:hover {
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
 }
@@ -163,6 +169,8 @@
 
   .catalog__wrapper {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .catalog__title {

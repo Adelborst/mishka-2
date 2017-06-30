@@ -14,11 +14,13 @@
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
         <div class="page-header__logo">
-          <picture>
-            <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
-            <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
-            <img src="img/mishka-logo-mobile.svg" alt="Барбершоп &ldquo;Бородинский&rdquo;">
-          </picture>
+          <a href="index.html">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+              <img src="img/mishka-logo-mobile.svg" alt="Барбершоп &ldquo;Бородинский&rdquo;">
+            </picture>
+          </a>
         </div>
         <ul class="main-nav__items">
           <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
@@ -63,7 +65,7 @@
             <p class="catalog__item-desc">Рост 30 см, вес 200 г</p>
           </div>
           <p class="catalog__item-price">1 200 руб.</p>
-        </div>
+        </div>        
       </article>
       <article class="catalog__item">
         <picture class="catalog__item-img">
@@ -97,10 +99,18 @@
   </section>
   <section class="video">
     <div class="video__wrapper">
-      <h3 class="video__title">Процесс<br> производства</h3>
+      <h3 class="video__title">
+        <svg class="icon video__title-icon">
+          <use xlink:href="img/sprite.svg#icon-video"></use>
+        </svg>
+        Процесс<br> производства</h3>
       <div class="video__box">
         <video class="video__player" src="media/мастер класс по вязанию корзинки крючком).mp4" poster="img/video-basket-mobile.jpg"></video>
-        <button type="button" name="button" class="video__play">Play</button>
+        <button type="button" name="button" class="video__play">Play
+          <svg class="icon video__play-icon">
+            <use xlink:href="img/sprite.svg#icon-play"></use>
+          </svg>
+        </button>
       </div>
       <p class="video__desc">
         По прозьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
