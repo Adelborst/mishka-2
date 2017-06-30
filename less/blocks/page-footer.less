@@ -26,52 +26,36 @@
 .social-link {
   display: inline-block;
   vertical-align: middle;
-  width: 23px;
-  height: 28px;
   margin-right: 35px;
   font-size: 0;
-  background: url("../../img/sprite.svg") no-repeat;
 
   &:last-child {
     margin-right: 0;
   }
 
-  &--inst {
-    background-position: 0 100%;
-    width: 22px;
-    height: 21px;
+  &--icon {
+    fill: #221f1f;
+
+    &-insta {
+      width: 21.769px;
+	    height: 21.334px;
+    }
+
+    &-fb {
+      width: 14.962px;
+	    height: 27.718px;
+    }
+
+    &-tw {
+      width: 23px;
+  	  height: 20.168px;
+    }
 
     &:hover {
-      background-position: 99.6875% 61.333333333333336%;
+      fill: #46c1ae;
     }
     &:active {
-      background-position: 63.125% 31.333333333333332%;
-    }
-  }
-
-  &--fb {
-    background-position: 97.55351681957187% 51.36986301369863%;
-    width: 15px;
-    height: 29px;
-
-    &:hover {
-      background-position: 99.08256880733946% 27.054794520547944%;
-    }
-    &:active {
-      background-position: 100% 39.726027397260275%;
-    }
-  }
-
-  &--tw {
-    background-position: 33.333333333333336% 89.03654485049834%;
-    width: 23px;
-    height: 20px;
-
-    &:hover {
-      background-position: 18.238993710691823% 89.03654485049834%;
-    }
-    &:active {
-      background-position:  25.78616352201258% 89.03654485049834%;
+      fill: #bde3dd;
     }
   }
 
@@ -84,18 +68,21 @@
 .page-footer__copyright-link {
   display: inline-block;
   vertical-align: middle;
-  width: 27px;
-  height: 34px;
   margin-left: 25px;
   font-size: 0;
-  background: url("../../img/sprite.svg") no-repeat;
-  background-position: 92.6984126984127% 64.11149825783973%;
+}
+
+.icon-htmlacademy {
+  width: 26.943px;
+  height: 34.09px;
+  fill: #63d1bb;
 
   &:hover {
-    background-position: 83.17460317460318% 71.77700348432056%;
+      fill: #46c1ae;
   }
+
   &:active {
-    background-position: 92.6984126984127% 52.26480836236934%;
+      fill: #bde3dd;
   }
 }
 
@@ -111,18 +98,23 @@
 
   .page-footer__logo {
     margin: 0;
-    background: url("../../img/sprite.svg") no-repeat;
-    background-position: 51.25% 11.846689895470384%;
     width: 102px;
     height: 34px;
     margin-right: 14.6%;
+  }
+
+  .footer-logo {
+    width: 102px;
+	  height: 34px;
 
     &:hover {
-      background-position: 0 32.75261324041812%;
+      fill: #46c1ae;
     }
+
     &:active {
-      background-position: 51.25% 0;
+      fill: #bde3dd;
     }
+
   }
 
   .page-footer__logo--hidden {

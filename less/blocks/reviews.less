@@ -69,6 +69,7 @@
   background: none;
   outline: none;
   border: none;
+  cursor: pointer;
   border: 1px solid #ececec;
 }
 
@@ -76,40 +77,26 @@
   border-left: none;
 }
 
-.reviews__btn {
+.reviews__btn--prev,
+.reviews__btn--next {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 26px;
+  margin-left: -25px;
+  margin-top: -13px;
+  fill: #000000;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50px;
-    height: 26px;
-    margin-left: -25px;
-    margin-top: -13px;
-    background: url("../../img/sprite.svg") no-repeat;
-    cursor: pointer;
-  }
+.reviews__btn--prev:hover,
+.reviews__btn--next:hover {
+  fill: #666666;
+}
 
-  &--prev::before {
-    background-position: 100% 0;
-  }
-  &--prev:hover::before {
-    background-position: 59.24657534246575% 23.050847457627118%;
-  }
-  &--prev:active::before {
-    background-position: 42.12328767123287% 23.050847457627118%;
-  }
-
-  &--next::before {
-    background-position: 100% 8.813559322033898%;
-  }
-  &--next:hover::before {
-    background-position: 52.054794520547944% 31.864406779661017%;
-  }
-  &--next:active::before {
-    background-position: 34.93150684931507% 31.864406779661017%;
-  }
+.reviews__btn--prev:active,
+.reviews__btn--next:active {
+  fill: #b2b2b2;
 }
 
 @media @tablet-widths {

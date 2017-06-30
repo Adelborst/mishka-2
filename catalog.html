@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Mishka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="page-header">
+    <h1 class="visually-hidden">Mishka</h1>
+    <nav class="main-nav  main-nav--closed  main-nav--nojs">
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <div class="main-nav__wrapper">
+        <div class="page-header__logo">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+            <img src="img/mishka-logo-mobile.svg" alt="Барбершоп &ldquo;Бородинский&rdquo;">
+          </picture>
+        </div>
+        <ul class="main-nav__items">
+          <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="main-nav__item"><a href="order.html">Вязание на заказ</a></li>
+        </ul>
+        <ul class="main-nav__user-items">
+          <li class="main-nav__user-item  main-nav__user-item--search">
+            <a href="#">
+              <svg class="icon icon-search">
+                <use xlink:href="img/sprite.svg#icon-search"></use>
+              </svg>
+            Поиск по сайту</a>
+          </li>
+          <li class="main-nav__user-item  main-nav__user-item--cart">
+            <a href="#">
+              <svg class="icon icon-cart">
+                <use xlink:href="img/sprite.svg#icon-cart"></use>
+              </svg>
+            Корзина: пока пуста</a>
+          </li>
+        </ul>
+        <ul class="main-nav__sales">
+          <li class="main-nav__item  main-nav__item--sales"><a class="main-nav__link" href="#">Новые поступления</a></li>
+          <li class="main-nav__item  main-nav__item--sales"><a class="main-nav__link" href="#">Распродажа</a></li>
+        </ul>
+        <p class="main-nav__deliver">Бесплатная доставка по России</p>
+      </div>
+    </nav>
+  </header>
+  <section class="catalog">
+    <h2 class="catalog__title">Каталог товаров</h2>
+    <div class="catalog__wrapper">
+      <article class="catalog__item">
+        <picture class="catalog__item-img">
+          <source media="(min-width: 1150px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+          <img src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Фото2">
+        </picture>
+        <div class="catalog__item-info">
+          <div class="catalog__item-info--box">
+            <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
+            <p class="catalog__item-desc">Рост 30 см, вес 200 г</p>
+          </div>
+          <p class="catalog__item-price">1 200 руб.</p>
+        </div>
+      </article>
+      <article class="catalog__item">
+        <picture class="catalog__item-img">
+          <source media="(min-width: 1150px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+          <img src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Фото2">
+        </picture>
+        <div class="catalog__item-info">
+          <div class="catalog__item-info--box">
+            <h3 class="catalog__item-title">Корзина для белья</h3>
+            <p class="catalog__item-desc">Диаметр 15 см, высота 10 см</p>
+          </div>
+          <p class="catalog__item-price">690 руб.</p>
+        </div>
+      </article>
+      <article class="catalog__item">
+        <picture class="catalog__item-img">
+          <source media="(min-width: 1150px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+          <img src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Фото2">
+        </picture>
+        <div class="catalog__item-info">
+          <div class="catalog__item-info--box">
+            <h3 class="catalog__item-title">Большая корзина для игрушек</h3>
+            <p class="catalog__item-desc">Диаметр 30 см, высота 30 см</p>
+          </div>
+          <p class="catalog__item-price">1 500 руб.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="video">
+    <div class="video__wrapper">
+      <h3 class="video__title">Процесс<br> производства</h3>
+      <div class="video__box">
+        <video class="video__player" src="media/мастер класс по вязанию корзинки крючком).mp4" poster="img/video-basket-mobile.jpg"></video>
+        <button type="button" name="button" class="video__play">Play</button>
+      </div>
+      <p class="video__desc">
+        По прозьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+      </p>
+      <a class="btn" href="#">Сделать заказ</a>
+    </div>
+  </section>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <p class="page-footer__logo page-footer__logo--hidden">
+        <svg class="icon footer-logo">
+          <use xlink:href="img/sprite.svg#logo-footer"></use>
+        </svg>
+      </p>
+      <p class="page-footer__social">
+        <span class="social-links">
+          <a class="social-link  " href="https://www.instagram.com/htmlacademy">Мы в Инстаграме
+            <svg class="icon social-link--icon social-link--icon-insta">
+              <use xlink:href="img/sprite.svg#icon-insta"></use>
+            </svg>
+          </a>
+          <a class="social-link  " href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке
+            <svg class="icon social-link--icon social-link--icon-fb">
+              <use xlink:href="img/sprite.svg#icon-fb"></use>
+            </svg>
+          </a>
+          <a class="social-link  " href="https://www.tweeter.com/htmlacademy">Мы в Твитере
+            <svg class="icon social-link--icon social-link--icon-tw">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </span>
+      </p>
+      <p class="page-footer__copyright">
+        Разработано:
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+          <svg class="icon icon-htmlacademy">
+            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+          </svg>
+        </a>
+      </p>
+    </div>
+  </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

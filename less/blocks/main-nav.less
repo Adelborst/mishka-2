@@ -1,6 +1,5 @@
 .main-nav {
   position: relative;
-  background: green;
 }
 
 .main-nav__toggle {
@@ -104,51 +103,34 @@
 
 .main-nav__user-item {
   position: relative;
+}
 
-  &--search::before,
-  &--basket::before {
-    content: "";
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    display: block;
-    width: 22px;
-    height: 22px;
-    cursor: pointer;
-    background: url("../../img/sprite.svg") no-repeat top left;
-  }
+.main-nav__user-item--search .icon-search {
+  position: absolute;
+  top: 30px;
+  left: 32px;
+  width: 17.6px;
+  height: 17.6px;
+  fill: #d3d2d2;
+}
 
-  &--search::before {
-    background-position: 83.95061728395062% 39.273927392739274%;
-    width: 18px;
-	  height: 18px;
-  }
-  &--search:hover::before {
-    background-position: 100% 81.12582781456953%;
-    width: 18px;
-    height: 19px;
-  }
-  &--search:active::before {
-      background-position: 83.95061728395062% 33.11258278145695%;
-      width: 18px;
-      height: 19px;;
-  }
+.main-nav__user-item--cart .icon-cart {
+  position: absolute;
+  top: 30px;
+  left: 32px;
+  width: 20.294px;
+	height: 18.849px;
+  fill: #d3d2d2;
+}
 
-  &--basket::before {
-    background-position: 47.0404984423676% 88.44884488448845%;
-    width: 21px;
-    height: 18px;
-  }
-  &--basket:hover::before {
-    background-position: 53.58255451713396% 88.44884488448845%;
-    width: 21px;
-    height: 18px;
-  }
-  &--basket:active::before {
-    background-position: 40.49844236760124% 88.44884488448845%;
-    width: 21px;
-    height: 18px;
-  }
+.main-nav__user-item--search:hover .icon-search,
+.main-nav__user-item--cart:hover .icon-cart {
+  fill: #63d1bb;
+}
+
+.main-nav__user-item--search:active .icon-search,
+.main-nav__user-item--cart:active .icon-cart {
+  opacity: .3;
 }
 
 .main-nav__sales,
@@ -247,12 +229,9 @@
     padding-right: 0;
   }
 
-  .main-nav__user-item {
-
-    &--search::before,
-    &--basket::before {
-      top: 34px;
-    }
+  .main-nav__user-item--search .icon-search,
+  .main-nav__user-item--cart .icon-cart {
+    top: 35px;
   }
 
 }

@@ -34,7 +34,7 @@
 .handmade__item a {
   display: block;
   padding: 27px 30px;
-  font: bold 18px/24px @fontTahoma, Arial, sans-serif;
+  font: bold 20px/30px @fontTahoma, Arial, sans-serif;
   text-decoration: none;
   color: #ffffff;
 }
@@ -51,24 +51,6 @@
     background-color: #59d5bc;
   }
 
-  &--interior::before {
-    content: "";
-    position: absolute;
-    top: 22px;
-    right: 35px;
-    width: 41px;
-    height: 62px;
-    background: url("../../img/sprite.svg") no-repeat;
-    background-position: 60.46511627906977% 49.42084942084942%;
-  }
-
-  &--interior:hover::before {
-    background-position: 13.490262458471762% 79.53667953667954%;
-  }
-  &--interior:active::before {
-    background-position: 0 79.53667953667954%;
-  }
-
   &--toy {
     background-color: #56c3b2;
   }
@@ -78,29 +60,44 @@
     background-color: #46c1ae;
   }
 
-  &--toy::before {
-    content: "";
-    position: absolute;
-    top: 22px;
-    right: 28px;
-    width: 60px;
-    height: 61px;
-    background: url("../../img/sprite.svg") no-repeat;
-    background-position: 71.63120567375887% 79.23076923076923%;
-  }
-
-  &--toy:hover::before {
-    background-position: 29.078014184397162% 79.23076923076923%;
-  }
-  &--toy:active::before {
-    background-position: 50.354609929078016% 79.23076923076923%;
-    color: #8be2d0;
-  }
-
   &--interior:active a,
   &--toy:active a {
     color: #8be2d0;
   }
+}
+
+.handmade__item--interior .icon-interior {
+  position: absolute;
+  top: 27px;
+  right: 20px;
+  width: 40.219px;
+  height: 62.411px;
+  fill: #3bb09d;
+}
+
+.handmade__item--interior:hover .icon-interior {
+  fill: #29a592;
+}
+
+.handmade__item--interior:active .icon-interior {
+  fill: #44c0aa;
+}
+
+.handmade__item--toy .icon-toy {
+  position: absolute;
+  top: 27px;
+  right: 20px;
+  width: 60px;
+  height: 59.62px;
+  fill: #35a999;
+}
+
+.handmade__item--toy:hover .icon-toy {
+  fill: #239f8e;
+}
+
+.handmade__item--toy:active .icon-toy {  
+  fill: #37b2a0;
 }
 
 @media @tablet-widths {
@@ -128,7 +125,7 @@
   }
 
   .handmade__items {
-    bottom: 0;
+    bottom: -10px;
     font-size: 0;
   }
 
@@ -145,7 +142,8 @@
   }
 
   .handmade__item a {
-    padding: 35px 35px;
+    padding: 30px;
+    padding-bottom: 40px;
   }
 
 }

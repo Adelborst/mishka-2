@@ -9,8 +9,10 @@ var minify = require("gulp-csso"); // подключение gulp-csso
 var rename = require("gulp-rename"); // подключение rename
 var imagemin = require("gulp-imagemin"); // подключение imagemin
 var svgstore = require("gulp-svgstore");
-var svgmin = require("gulp-svgmin");
-var sgvSprite = require("gulp-svg-sprite");
+var svgSprite = require('gulp-svg-sprite'),
+	  svgmin = require('gulp-svgmin'),
+	  cheerio = require('gulp-cheerio'),
+	  replace = require('gulp-replace');
 var uglify = require("gulp-uglify");
 var run = require("run-sequence"); // плагин для последовательного запуска задач
 var del = require("del"); // плагин для удаления папок и файлов
@@ -75,33 +77,49 @@ gulp.task("images", function() { // создание таска images
     ]))
     .pipe(gulp.dest("build/img")); // указываем куда ложить минифицированные изображения
 })
-gulp.task('sprite', function () {
+gulp.task('svgSprite', function () {
 	return gulp.src("build/img/svg/*.svg")
-    .pipe(svgmin())
-    .pipe(sgvSprite({
-      // shape: {
-      //   spacing: {			// Add padding
-      //     padding: 5
-      //   }
-      // },
-      mode: {
-        css: {
-          render: {
-            css: true
-          }
-        }
-      }
-    }))
-    .pipe(gulp.dest("build/img"));
+	// minify svg
+		.pipe(svgmin({
+			js2svg: {
+				pretty: true
+			}
+		}))
+		// remove all fill, style and stroke declarations in out shapes
+		.pipe(cheerio({
+			run: function ($) {
+				$('[fill]').removeAttr('fill');
+				$('[stroke]').removeAttr('stroke');
+				$('[style]').removeAttr('style');
+			},
+			parserOptions: {xmlMode: true}
+		}))
+		// cheerio plugin create unnecessary string '&gt;', so replace it.
+		.pipe(replace('&gt;', '>'))
+		// build svg sprite
+		.pipe(svgSprite({
+			mode: {
+				symbol: {
+					sprite: "../sprite.svg",
+					render: {
+						css: {
+							dest:'../sprite.css',
+							// template: assetsDir + "sass/templates/_sprite_template.scss"
+						}
+					}
+				}
+			}
+		}))
+		.pipe(gulp.dest('build/img'));
 });
-// gulp.task("symbols", function () { // таск для сборки svg-спрайта
-//   return gulp.src("app/img/icons/*.svg") // указываем откуда брать изображения svg
+// gulp.task("sprite", function () { // таск для сборки svg-спрайта
+//   return gulp.src("build/img/svg/*.svg") // указываем откуда брать изображения svg
 //   .pipe(svgmin()) // минифицируем svg перед созданием спрайта
 //   .pipe(svgstore({ // создаем спрайт
 //     inlineSvg: true // уберет из файла все не нужное (doctype, xml и прочее)
 //   }))
-//   .pipe(rename("symbols.svg")) // переименовываем спрайт
-//   .pipe(gulp.dest("app/img")); // указываем куда ложить готовый спрайт
+//   .pipe(rename("sprite.svg")) // переименовываем спрайт
+//   .pipe(gulp.dest("build/img")); // указываем куда ложить готовый спрайт
 // })
 gulp.task('jsmin', function() {
   return gulp.src([
@@ -122,5 +140,5 @@ gulp.task("serve", function () {
   gulp.watch('js/**/*.js', ["jsmin"]); // Наблюдение за JS файлами в папке js
 })
 gulp.task("build", function (fn) {
-  run("clean", "copy", "style", "normalize", "jsmin", "images", "sprite", fn);
+  run("clean", "copy", "style", "normalize", "jsmin", "images", "svgSprite", fn);
 })
