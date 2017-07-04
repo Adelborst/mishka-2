@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <title>Mishka</title>
+  <title>Каталог Mishka</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/normalize.min.css" rel="stylesheet">
   <link href="css/style.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
           </a>
         </div>
         <ul class="main-nav__items">
-          <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="main-nav__item"><a>Каталог товаров</a></li>
           <li class="main-nav__item"><a href="order.html">Вязание на заказ</a></li>
         </ul>
         <ul class="main-nav__user-items">
@@ -65,7 +65,7 @@
             <p class="catalog__item-desc">Рост 30 см, вес 200 г</p>
           </div>
           <p class="catalog__item-price">1 200 руб.</p>
-        </div>        
+        </div>
       </article>
       <article class="catalog__item">
         <picture class="catalog__item-img">
@@ -99,23 +99,36 @@
   </section>
   <section class="video">
     <div class="video__wrapper">
-      <h3 class="video__title">
+      <h3 class="video__title video__title--mobile">
         <svg class="icon video__title-icon">
           <use xlink:href="img/sprite.svg#icon-video"></use>
         </svg>
-        Процесс<br> производства</h3>
+        <p class="video__title-text">
+            Процесс<br> производства
+        </p>
+      </h3>
       <div class="video__box">
-        <video class="video__player" src="media/мастер класс по вязанию корзинки крючком).mp4" poster="img/video-basket-mobile.jpg"></video>
+        <video class="video__player" src="media/мастер класс по вязанию корзинки крючком).mp4" poster="img/video-poster-desktop.jpg"></video>
         <button type="button" name="button" class="video__play">Play
           <svg class="icon video__play-icon">
             <use xlink:href="img/sprite.svg#icon-play"></use>
           </svg>
         </button>
       </div>
-      <p class="video__desc">
-        По прозьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-      </p>
-      <a class="btn" href="#">Сделать заказ</a>
+      <div class="video__info">
+        <h3 class="video__title">
+          <svg class="icon video__title-icon">
+            <use xlink:href="img/sprite.svg#icon-video"></use>
+          </svg>
+          <p class="video__title-text">
+              Процесс<br> производства
+          </p>
+        </h3>
+        <p class="video__desc">
+          По прозьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+        </p>
+        <a class="btn" href="#">Сделать заказ</a>
+      </div>
     </div>
   </section>
   <footer class="page-footer">
