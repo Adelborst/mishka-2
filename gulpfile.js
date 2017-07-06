@@ -22,7 +22,7 @@ gulp.task("clean", function () { // удаляет build
 });
 gulp.task("copy", function() { // копирует необходимые файлы в build
   return gulp.src([
-    "fonts/**/*.{woff,woff2}",
+    "fonts/**/*.{woff,woff2,ttf}",
     "img/**",
     "js/**",
     "*.html"
